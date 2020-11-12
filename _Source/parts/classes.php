@@ -35,5 +35,19 @@
  		//osetrit chybu, kdy uzivatelsky ucet jiz exituje
 
  	}
+ 	public function is_logged_in() {
+ 		if (isset($_SESSION["user_session"])) {
+ 			return true;
+ 		}
+ 	}
+
+ 	public function redirect($url) {
+ 		header("Location: $url")
+ 	}
  	
+ 	public function log_out() {
+ 		session_destroy();
+ 		unset($_SESSION["user-session"]);
+ 		return true;
+ 	}
  }
