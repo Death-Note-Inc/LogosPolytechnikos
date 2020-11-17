@@ -2,14 +2,22 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+session_start();
+include_once("classes.php");
 
 
 $config = parse_ini_file("config.ini"); //fix me later
-echo $config["db_host"];
+$db_host = $config["db_host"];
+$db_user = $config["db_user"];
+$db_pass = $config["db_password"];
+$db_name = $config["db_name"];
 
-$mysqli = new mysqli($config["db_host"],$config["db_user"],$config["db_password"],$config["db_name"]);
 
-if ($mysqli -> connect_errno) {
-  echo "Chyba při připojení MySQL: " . $mysqli -> connect_error;
-  exit();
+try {
+    $db_conn = new PDO("mysql:host={$db_host};dbname={$db_name}", $db_user, $db_pass);
+    $db_conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    array_push($errors, $e->getMessage());
 }
+
+$user = new User($db_conn);
