@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 include_once("parts/db-connect.php");
 //$user->register("pes","domaci","pes@aaa.cz","1","aaa");
 if (($user->login("pes@aaa.cz","aaa") == true)) {
-  echo "ano";
+  echo "ano přihlášen";
 }
   else echo "ne";
 ?>
