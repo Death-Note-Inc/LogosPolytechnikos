@@ -3,10 +3,19 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+//load dependeces
+include_once("parts/db-connect.php");
 
 //redirtect user if not logged in
 if (!$user->is_logged_in()) {
     $user->redirect('index.php');
+}
+
+//check the logout button
+if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
+    $user->log_out();
+    $user->redirect('index.php');
+    
 }
 
 ?>
@@ -33,7 +42,7 @@ if (!$user->is_logged_in()) {
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="info">
-            <a href="#" class="d-block"><?php echo ($current_user->getName() ." " .$current_user->getSurname())?></a>
+            <a href="#" class="d-block"><?php echo $user->getUserInfo("name") ." ". $user->getUserInfo("surname"); ?></a>
           </div>
         </div>
 
@@ -126,6 +135,14 @@ if (!$user->is_logged_in()) {
                 </a>
               </li>
             </ul>
+          </li>
+          <li class="nav-item">
+            <a href="?logout=true" class="nav-link">
+              <i class="nav-icon fas fa-power-off"></i>
+              <p>
+                Odhlásit se
+              </p>
+            </a>
           </li>
         </ul>
       </li>

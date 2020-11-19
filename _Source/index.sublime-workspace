@@ -1,0 +1,472 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"return",
+				"returned_row"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"sea",
+				"searchTerm"
+			],
+			[
+				"out",
+				"outline-offset\tproperty"
+			],
+			[
+				"padd",
+				"padding-top\tproperty"
+			],
+			[
+				"moc",
+				"mocninaR"
+			],
+			[
+				"paddin",
+				"padding-left\tproperty"
+			],
+			[
+				"align",
+				"text-align\tproperty"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			],
+			[
+				"chec",
+				"checked"
+			],
+			[
+				"box-s",
+				"box-shadow\tproperty"
+			],
+			[
+				"font-he",
+				"font-weight\tproperty"
+			],
+			[
+				"backgrd",
+				"background-color\tproperty"
+			],
+			[
+				"background-i",
+				"background-image\tproperty"
+			],
+			[
+				"bacgroudn-",
+				"background-position\tproperty"
+			],
+			[
+				"bacgr",
+				"background-size\tproperty"
+			],
+			[
+				"bac",
+				"background-position\tproperty"
+			],
+			[
+				"font-s",
+				"font-size\tproperty"
+			],
+			[
+				"border-",
+				"border-radius\tproperty"
+			],
+			[
+				"a",
+				"auto\tbackground-size"
+			],
+			[
+				"con",
+				"container"
+			],
+			[
+				"tab",
+				"table-cell\tdisplay"
+			],
+			[
+				"ali",
+				"align-items\tproperty"
+			],
+			[
+				"se",
+				"sekce1"
+			],
+			[
+				"inli",
+				"inline-block\tdisplay"
+			],
+			[
+				"li",
+				"li\tTag"
+			],
+			[
+				"fi",
+				"figure\tTag"
+			],
+			[
+				"i",
+				"inherit\tfloat"
+			],
+			[
+				"in",
+				"initial\tfloat"
+			],
+			[
+				"list",
+				"list-style\tproperty"
+			],
+			[
+				"paddi",
+				"padding\tproperty"
+			],
+			[
+				"font",
+				"font-size\tproperty"
+			],
+			[
+				"podstra",
+				"podstranka1"
+			],
+			[
+				"backgrao",
+				"background-image\tproperty"
+			],
+			[
+				"repe",
+				"repeat-x\tbackground-repeat"
+			],
+			[
+				"backg",
+				"background-color\tproperty"
+			],
+			[
+				"background",
+				"background-position\tproperty"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"zanr",
+				"zanrid"
+			],
+			[
+				"autor",
+				"autorid"
+			],
+			[
+				"por",
+				"portfolioModal1"
+			],
+			[
+				"pregma",
+				"preg_match"
+			],
+			[
+				"pro",
+				"prohlizec"
+			],
+			[
+				"tele",
+				"telefonRegex"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/janzadnik/Documents/GitHub/LogosPolytechnikos/_Source/parts/classes.php",
+		"/Users/janzadnik/Downloads/ConsoleApplication_Sample-Lists/ConsoleApplication_Sample-Lists/Array1D.cpp",
+		"/Users/janzadnik/Downloads/ConsoleApplication_Sample-Lists/ConsoleApplication_Sample-Lists/LinkedList.cpp",
+		"/Users/janzadnik/Documents/GitHub/LogosPolytechnikos/_Source/parts/config.ini",
+		"/Users/janzadnik/Documents/GitHub/LogosPolytechnikos/_Source/parts/db-connect.php",
+		"/Users/janzadnik/Downloads/D1CARS.xml",
+		"/Users/janzadnik/Documents/GitHub/LogosPolytechnikos/_Source/index.php",
+		"/Users/janzadnik/Documents/GitHub/LogosPolytechnikos/_Source/home.php",
+		"/Users/janzadnik/Documents/GitHub/LogosPolytechnikos/_Source/parts/header.php",
+		"/Users/janzadnik/Documents/GitHub/LogosPolytechnikos/_Source/parts/class/user.php",
+		"/Users/janzadnik/Documents/GitHub/LogosPolytechnikos/_Source/register.php",
+		"/Users/janzadnik/Documents/GitHub/LogosPolytechnikos/_Source/class/user.php",
+		"/Users/janzadnik/Documents/GitHub/LogosPolytechnikos/_Source/config.ini",
+		"/Users/janzadnik/Documents/GitHub/LogosPolytechnikos/_Source/config.ini.php",
+		"/Users/janzadnik/Documents/GitHub/LogosPolytechnikos/_Source/template-parts/header.php",
+		"/Users/janzadnik/Documents/GitHub/LogosPolytechnikos/_Source/config.php",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/8e1c0fca-9807-4332-97c6-e42535d32f89/argali_cz/www/.htaccess",
+		"/Users/janzadnik/Downloads/DDS_LinkedList-3/DDS_LinkedList/LinkedList.cpp",
+		"/Users/janzadnik/Downloads/UKOL4/DDS_LinkedList/DDS_LinkedList/DDS_LinkedList.cpp",
+		"/Users/janzadnik/Downloads/LinkedListDouble.cpp",
+		"/Users/janzadnik/Downloads/UKOL4/DDS_LinkedList/DDS_LinkedList/LinkedList.cpp",
+		"/Users/janzadnik/Downloads/LinkedList.cpp",
+		"/Users/janzadnik/Downloads/DDS_LinkedList-2/DDS_LinkedList/LinkedList.h",
+		"/Users/janzadnik/Downloads/DDS_LinkedList-2/DDS_LinkedList/LinkedList.cpp",
+		"/Users/janzadnik/Downloads/UKOL4/DDS_LinkedList/DDS_LinkedList/LinkedListDouble.h",
+		"/Users/janzadnik/Downloads/UKOL4/DDS_LinkedList/DDS_LinkedList/LinkedListDouble.cpp",
+		"/Users/janzadnik/Downloads/DDS_LinkedList-2/DDS_LinkedList/DDS_LinkedList.cpp",
+		"/Users/janzadnik/Downloads/DDS_LinkedList-2/DDS_LinkedList/LinkedListDouble.cpp",
+		"/Users/janzadnik/Downloads/DDS_LinkedList/DDS_LinkedList/LinkedList.h",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/8e1c0fca-9807-4332-97c6-e42535d32f89/atlantic_cz/erp/octopus/erp_report/worker.php",
+		"/Users/janzadnik/Documents/GitHub/LogosPolytechnikos/Zdrojove_sablony_html/index.html",
+		"/Users/janzadnik/Documents/GitHub/betoni/parts/head.php",
+		"/Users/janzadnik/Downloads/Databáze_obcí_1-1-2014.xlsx",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/8e1c0fca-9807-4332-97c6-e42535d32f89/gold-crystal_cz/www/modContact.php",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/8e1c0fca-9807-4332-97c6-e42535d32f89/gold-crystal_cz/www/presentation/modules/modContact.php",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/8e1c0fca-9807-4332-97c6-e42535d32f89/gold-crystal_cz/www/modules/modContact.php",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/8e1c0fca-9807-4332-97c6-e42535d32f89/gold-crystal_cz/www/octopus/kontakty/kontakty.php",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/DSA/ukol2/DSA_Cv02-żeÁen°/DSA_Cv02/MnozinoveOperace.h",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/DSA/ukol2/DSA_Cv02-żeÁen°/DSA_Cv02/MnozinoveOperace.cpp",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/DSA/ukol2/DSA_Cv02-żeÁen°/DSA_Cv02/Funkce_Cykly.h",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/DSA/ukol2/DSA_Cv02-żeÁen°/DSA_Cv02/Funkce_Cykly.cpp",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/DSA/ukol2/DSA_Cv02-żeÁen°/DSA_Cv02/DSA_Cv02.vcxproj.user",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/DSA/ukol2/DSA_Cv02-żeÁen°/DSA_Cv02/DSA_Cv02.vcxproj.filters",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/DSA/ukol2/DSA_Cv02-żeÁen°/DSA_Cv02/DSA_Cv02.cpp",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/DSA/ukol2/DSA_Cv02-żeÁen°/DSA_Cv02/DSA_Cv02.vcxproj",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv7/index.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv4/3.html",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/3abe76e5-ac5a-4468-9325-4941393edfd2/home/zadnik02/public_html/cv6/obce.php",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/3abe76e5-ac5a-4468-9325-4941393edfd2/home/zadnik02/public_html/cv6/2.html",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/3abe76e5-ac5a-4468-9325-4941393edfd2/home/zadnik02/public_html/cv6/nahrajobce.php",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv6/vypisdb.php",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv6/nahrajobce.php",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv6/obce.txt",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv6/2.html",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/3abe76e5-ac5a-4468-9325-4941393edfd2/home/zadnik02/public_html/cv6/1.html",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/3abe76e5-ac5a-4468-9325-4941393edfd2/home/zadnik02/public_html/cv6/vypisdb.php",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv6/1.html",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/3abe76e5-ac5a-4468-9325-4941393edfd2/home/zadnik02/public_html/cv5/search.php",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/3abe76e5-ac5a-4468-9325-4941393edfd2/home/zadnik02/public_html/cv5/2.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv5/1.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv5/2.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv5/search.php",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv4/kalkulator.php",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv4/2.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv4/1.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv4/tabulka.txt",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv4/jmeno.txt",
+		"/Users/janzadnik/Documents/GitHub/LogosPolytechnikos/README.md",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/e9a608c5-46aa-410a-be88-2935aa0f618e/home/zadnik02/public_html/index.html",
+		"/Users/janzadnik/Downloads/cv3/Vrtule_fem.fem",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv3/6.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv3/7.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv3/5.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv3/3.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv3/4.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv3/2.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv3/1.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/DSA/ukol1/#include \"stdafx.h\"",
+		"/Users/janzadnik/Downloads/DSA_Cviceni_01_final/DSA_Cviceni_01/CislaOperace.h",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv2/4.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv2/3.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv2/2.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv2/1.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv2/theme.css",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/de530c42-37d7-4f7c-bb08-7440d41aff0e/easycargo3dcom/wp-content/themes/easycargo/template-try.php",
+		"/Users/janzadnik/Downloads/cp-online 30-09-2020 134546.csv",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/8e1c0fca-9807-4332-97c6-e42535d32f89/prikryvky_cz/www/wp-content/plugins/cp-online-podani-custom/cp-online-podani.php",
+		"/Users/janzadnik/Downloads/cp-online 30-09-2020 070612.csv",
+		"/Users/janzadnik/Downloads/cp-online 30-09-2020 071618.csv",
+		"/Users/janzadnik/Downloads/cp-online 30-09-2020 071104.csv",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/8e1c0fca-9807-4332-97c6-e42535d32f89/prikryvky_cz/www/wp-config.php",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/8e1c0fca-9807-4332-97c6-e42535d32f89/prikryvky_cz/www/phpA1OT1i",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv1/reseni/5.html",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/8e1c0fca-9807-4332-97c6-e42535d32f89/prikryvky_cz/www/log.htm",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv1/reseni/6.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv1/reseni/4.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv1/reseni/3.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv1/reseni/1.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv1/reseni/2.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv1/reseni/index.html",
+		"/Users/janzadnik/Documents/Škola/Vysoká/všpj/WT/cv1/index.html",
+		"/Users/janzadnik/Downloads/cp-online 23-09-2020 065136.csv",
+		"/Users/janzadnik/Downloads/CSV oddělený středníkem.txt",
+		"/Users/janzadnik/Downloads/csv_poznamky.csv",
+		"/Users/janzadnik/Downloads/ExposureChecks-2020-09-20.json",
+		"/Users/janzadnik/Downloads/table_order_item.csv",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/efdbddc1-d663-4538-8f4d-766815712111/www/readme.html",
+		"/Users/janzadnik/Downloads/betoni-master/homepage.php",
+		"/Users/janzadnik/Downloads/betoni-master/README.md",
+		"/Users/janzadnik/Downloads/betoni-master/bedneni.php",
+		"/Users/janzadnik/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/E11995E9-8D75-476B-ACA1-F4F4F9B95142/N202007084.isdoc",
+		"/Users/janzadnik/Downloads/export (2).csv",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/8e1c0fca-9807-4332-97c6-e42535d32f89/cobap_cz/www/wp-config.php",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/fz3temp-2/robots.txt",
+		"/Users/janzadnik/Downloads/easycargo/puvodni/easycargo/lib/cleanup.php",
+		"/Users/janzadnik/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/41F73228-4A2A-438E-84A1-908141E366B0/PriFaktury.xml",
+		"/Users/janzadnik/Downloads/invoices_2020_8m.pohoda.xml",
+		"/Users/janzadnik/Downloads/expenses_2020_8m.xml",
+		"/Users/janzadnik/Downloads/expenses_2020_8m.xlsx",
+		"/Users/janzadnik/Downloads/expenses_2020_8m.csv",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/fz3temp-2/atlantic-user-trackink.php",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/fz3temp-2/woo-gopay-inline.php",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/fz3temp-2/log.php",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/fz3temp-2/notices.php",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/fz3temp-2/index.php",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/fz3temp-2/notify_log.txt",
+		"/private/var/folders/w3/3r9pxdrj46n_f24v6nz6jpb40000gn/T/fz3temp-2/daktela-log.txt",
+		"/Users/janzadnik/Desktop/mondeo/Travelpilot_NX_and_MCA_Video_Mode_Withouth_filter.ino"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

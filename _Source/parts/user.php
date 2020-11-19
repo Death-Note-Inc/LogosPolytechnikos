@@ -3,30 +3,39 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 class User {
-	private $name;
-	private $surname;
-	private $email;
-	private $role;
-	private $password;
 	private $db;
 
- 	//getters
-	function getName() {
-		return $this->name;
-	}
-	function getSurname() {
-		return $this->surname;
-	}
-	function getEmail() {
-		return $this->email;
-	}
-	function getRole() {
-		return $this->role;
-	}
+	//get user info using database
+	function getUserInfo($information) {
+		if ($this->is_logged_in()) {
+			$session = ($_SESSION["user_session"]);
+			$sql = "SELECT * FROM users WHERE email = '$session'";
+			$query = $this->db->prepare($sql);
+			$query->execute();
+			$returned_row = $query->fetch(PDO::FETCH_ASSOC);
+			switch ($information) {
+				case 'name':
+					return $returned_row["name"];
+					break;
+				case 'surname':
+					return $returned_row["surname"];
+					break;
+				case 'email':
+					return $returned_row["email"];
+					break;
+				case 'hash_password':
+					return $returned_row["hash_password"];
+					break;
+				case 'role':
+					return $returned_row["role"];
+					break;
+				
+				default:
+					return false;
+					break;
+			}
 
-	public function is_admin() {
-		if ($this->role == "1") return true;
-		else return false;
+		}
 	}
 
 
@@ -76,10 +85,8 @@ class User {
 		} catch (PDOException $e) {
 			echo $e;
 		}
-	}	
+	}
 
-
-	
 	public function is_logged_in() {
 		if (isset($_SESSION["user_session"])) {
 			return true;
