@@ -70,7 +70,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
             </a>
             <ul class="nav nav-treeview active">
               <li class="nav-item active">
-                <a href="addarticle.php" class="nav-link active">
+                <a href="add-article.php" class="nav-link active">
                   <i class="far fa-edit nav-icon"></i>
                   <p>Přidat článek</p>
                 </a>
@@ -83,7 +83,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
                 </li>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                <a href="manage-article.php" class="nav-link">
                   <i class="far fa-list-alt nav-icon"></i>
                   <p>Spravovat články</p>
                 </a>

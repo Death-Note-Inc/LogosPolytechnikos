@@ -52,7 +52,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
           <!-- Add icons to the links using the .nav-icon class
            with font-awesome or any other icon font library -->
            <li class="nav-item">
-            <a href="home.php" class="nav-link active">
+            <a href="home.php" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Homepage
@@ -68,8 +68,8 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
                 <span class="badge badge-info right">3 810</span>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
+            <ul class="nav nav-treeview active">
+              <li class="nav-item active">
                 <a href="add-article.php" class="nav-link">
                   <i class="far fa-edit nav-icon"></i>
                   <p>Přidat článek</p>
@@ -78,12 +78,12 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
                   <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
                     <i class="far fa-check-square nav-icon"></i>
                     <span class="badge badge-warning right">31</span>
-                    <p>Ke schválení</p>
+                    <p> Ke schválení</p>
                   </a>
                 </li>
               </li>
               <li class="nav-item">
-                <a href="manage-article.php" class="nav-link">
+                <a href="pages/layout/top-nav-sidebar.html" class="nav-link active">
                   <i class="far fa-list-alt nav-icon"></i>
                   <p>Spravovat články</p>
                 </a>
@@ -153,171 +153,96 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
 <!-- /.sidebar -->
 </aside>
 
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
-  <div class="content-header">
+  <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0 text-dark">Dashboard</h1>
-        </div><!-- /.col -->
+          <h1>Spravovat články</h1>
+        </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Logos Polytechnikos</a></li>
-            <li class="breadcrumb-item active">Homepage</li>
+            <li class="breadcrumb-item"><a href="home.php">Domů</a></li>
+            <li class="breadcrumb-item active">Přidat článek</li>
           </ol>
-        </div><!-- /.col -->
-      </div><!-- /.row -->
+        </div>
+      </div>
     </div><!-- /.container-fluid -->
-  </div>
-  <!-- /.content-header -->
-
-  <!-- Main content -->
-  <section class="content">
-    <div class="container-fluid">
-      <!-- Small boxes (Stat box) -->
-      <div class="row">
-        <div class="col-lg-4 col-6">
-          <!-- small box -->
-          <div class="small-box bg-info">
-            <div class="inner">
-              <h3>150</h3>
-
-              <p>Nových článků ke schválení</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-bag"></i>
-            </div>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-4 col-6">
-          <!-- small box -->
-          <div class="small-box bg-warning">
-            <div class="inner">
-              <h3>44</h3>
-
-              <p>Zaregistrovaných uživatelů</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-person-add"></i>
-            </div>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-4 col-6">
-          <!-- small box -->
-          <div class="small-box bg-danger">
-            <div class="inner">
-              <h3>65</h3>
-
-              <p>Návštěvníků dnes</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-pie-graph"></i>
-            </div>
-          </div>
-        </div>
-        <!-- ./col -->
-      </div>
-      <!-- /.row -->
-      <!-- Main row -->
-      <div class="row">
-        <!-- Left col -->
-        <section class="col-lg-7 connectedSortable">
-         <!-- Calendar -->
-         <div class="card bg-gradient-success">
-          <div class="card-header border-0">
-
-            <h3 class="card-title">
-              <i class="far fa-calendar-alt"></i>
-              Kalendář
-            </h3>
-          </div>
-          <!-- /.card-header -->
-          <div class="card-body pt-0">
-            <!--The calendar -->
-            <div id="calendar" style="width: 100%"></div>
-          </div>
-          <!-- /.card-body -->
-        </div>
-
-
-
-
-
-      </section>
-      <!-- /.Left col -->
-      <!-- right col (We are only adding the ID to make the widgets sortable)-->
-      <section class="col-lg-5 connectedSortable">
-
-        <!-- Map card -->
-        <div class="card bg-gradient-primary">
-          <div class="card-header border-0">
-            <h3 class="card-title">
-              <i class="fas fa-map-marker-alt mr-1"></i>
-              Návštěvníci
-            </h3>
-            <!-- card tools -->
-            <div class="card-tools">
-              <button type="button"
-              class="btn btn-primary btn-sm daterange"
-              data-toggle="tooltip"
-              title="Date range">
-              <i class="far fa-calendar-alt"></i>
-            </button>
-            <button type="button"
-            class="btn btn-primary btn-sm"
-            data-card-widget="collapse"
-            data-toggle="tooltip"
-            title="Collapse">
-            <i class="fas fa-minus"></i>
-          </button>
-        </div>
-        <!-- /.card-tools -->
-      </div>
-      <div class="card-body">
-        <div id="world-map" style="height: 250px; width: 100%;"></div>
-      </div>
-      <!-- /.card-body-->
-      <div class="card-footer bg-transparent">
-        <div class="row">
-          <div class="col-4 text-center">
-            <div id="sparkline-1"></div>
-            <div class="text-white">Dnes</div>
-          </div>
-          <!-- ./col -->
-          <div class="col-4 text-center">
-            <div id="sparkline-2"></div>
-            <div class="text-white">Včera</div>
-          </div>
-          <!-- ./col -->
-          <div class="col-4 text-center">
-            <div id="sparkline-3"></div>
-            <div class="text-white">Předevčírem</div>
-          </div>
-          <!-- ./col -->
-        </div>
-        <!-- /.row -->
-      </div>
-    </div>
-    <!-- /.card -->
-
-
-
   </section>
-  <!-- right col -->
+
+  <section class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card card-outline card-info">
+          <div class="col-md-6">
+            <h1>Article name 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum ex eget porttitor sollicitudin. Morbi cursus tempor placerat. Pellentesque suscipit tortor in orci pretium, ac facilisis ex pretium. Fusce hendrerit orci diam, vitae tristique quam porttitor eu. Donec ligula orci, ultricies in sagittis non, porta sed lorem. Aenean interdum posuere mattis. Curabitur dignissim dictum quam, vitae malesuada velit tristique a. </p>
+            <div class="col-md-1">
+              <table class="table borderless">
+                  <tr>
+                    <td>
+                      <button type="submit" class="btn btn-primary">Upravit</button> 
+                    </td>
+                    <td>
+                      <button type="submit" class="btn btn-danger">Smazat</button> 
+                    </td>
+                  </tr>
+              </table>
+            </div>
+          
+            <hr>
+            <h1>Article name 2</h1>
+            <p>Sed interdum massa ac pretium faucibus. Integer semper euismod lorem faucibus molestie. Aenean luctus ut metus eget dignissim. Sed tincidunt augue non elementum pharetra. Suspendisse non feugiat urna. Etiam egestas neque euismod neque sollicitudin consectetur. Fusce facilisis augue a velit porta scelerisque. Sed mattis justo sapien. Sed ultrices lectus diam, id vestibulum ante finibus a. </p>
+            <div class="col-md-1">
+              <table class="table borderless">
+                  <tr>
+                    <td>
+                      <button type="submit" class="btn btn-primary">Upravit</button> 
+                    </td>
+                    <td>
+                      <button type="submit" class="btn btn-danger">Smazat</button> 
+                    </td>
+                  </tr>
+              </table>
+            </div>  
+            <hr>
+
+            <h1>Article name 3</h1>
+            <p>Sed interdum massa ac pretium faucibus. Integer semper euismod lorem faucibus molestie. Aenean luctus ut metus eget dignissim. Sed tincidunt augue non elementum pharetra. Suspendisse non feugiat urna. Etiam egestas neque euismod neque sollicitudin consectetur. Fusce facilisis augue a velit porta scelerisque. Sed mattis justo sapien. Sed ultrices lectus diam, id vestibulum ante finibus a. </p>
+            <div class="col-md-1">
+              <table class="table borderless">
+                  <tr>
+                    <td>
+                      <button type="submit" class="btn btn-primary">Upravit</button> 
+                    </td>
+                    <td>
+                      <button type="submit" class="btn btn-danger">Smazat</button> 
+                    </td>
+                  </tr>
+              </table>
+            </div>  
+            <hr>
+
+        </div>
+      </div>
+      <!-- /.col-->
+    </div>
+    <!-- ./row -->
+  </section>
+
 </div>
-<!-- /.row (main row) -->
-</div><!-- /.container-fluid -->
-</section>
-<!-- /.content -->
-</div>
+
+
 <!-- /.content-wrapper -->
 <footer class="main-footer">
-  <strong>Copyright &copy; 2020 DeathNote</strong> . Běží na šabloně: <a href="http://adminlte.io">AdminLTE.io</a>.
-  All rights reserved.
+  <div class="float-right d-none d-sm-block">
+    <b>Version</b> 3.0.5
+  </div>
+  <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
+  reserved.
 </footer>
 
 <!-- Control Sidebar -->
@@ -362,5 +287,20 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+
+<script>
+ /** add active class and stay opened when selected */
+var url = window.location;
+
+// for sidebar menu entirely but not cover treeview
+$('ul.sidebar-menu a').filter(function() {
+   return this.href == url;
+}).parent().addClass('active');
+
+// for treeview
+$('ul.treeview-menu a').filter(function() {
+   return this.href == url;
+}).parentsUntil(".sidebar-menu > .treeview-menu").addClass('active');
+    </script>
 </body>
 </html>
