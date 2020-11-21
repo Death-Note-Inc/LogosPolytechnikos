@@ -71,12 +71,12 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="addarticle.php" class="nav-link">
-                  <i class="far fa-plus nav-icon"></i>
+                  <i class="far fa-edit nav-icon"></i>
                   <p>Přidat článek</p>
                 </a>
                 <li class="nav-item">
                   <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
-                    <i class="far fa-check nav-icon"></i>
+                    <i class="far fa-check-square nav-icon"></i>
                     <span class="badge badge-warning right">31</span>
                     <p>Ke schválení</p>
                   </a>
@@ -84,7 +84,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
               </li>
               <li class="nav-item">
                 <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
-                  <i class="far fa-edit nav-icon"></i>
+                  <i class="far fa-list-alt nav-icon"></i>
                   <p>Spravovat články</p>
                 </a>
               </li>
@@ -101,7 +101,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="pages/charts/chartjs.html" class="nav-link">
-                  <i class="far fa-plus nav-icon"></i>
+                  <i class="far fa-plus-square nav-icon"></i>
                   <p>Přidat vydání</p>
                 </a>
               </li>
@@ -124,7 +124,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="pages/charts/chartjs.html" class="nav-link">
-                  <i class="far fa-plus nav-icon"></i>
+                  <i class="far fa-plus-square nav-icon"></i>
                   <p>Přidat uživatele</p>
                 </a>
               </li>

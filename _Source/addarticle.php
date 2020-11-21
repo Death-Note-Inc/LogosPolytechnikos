@@ -52,7 +52,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
           <!-- Add icons to the links using the .nav-icon class
            with font-awesome or any other icon font library -->
            <li class="nav-item">
-            <a href="home.php" class="nav-link active">
+            <a href="home.php" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Homepage
@@ -68,23 +68,23 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
                 <span class="badge badge-info right">3 810</span>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
-                  <i class="far fa-plus nav-icon"></i>
+            <ul class="nav nav-treeview active">
+              <li class="nav-item active">
+                <a href="addarticle.php" class="nav-link active">
+                  <i class="far fa-edit nav-icon"></i>
                   <p>Přidat článek</p>
                 </a>
                 <li class="nav-item">
                   <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
-                    <i class="far fa-check nav-icon"></i>
+                    <i class="far fa-check-square nav-icon"></i>
                     <span class="badge badge-warning right">31</span>
-                    <p>Ke schválení</p>
+                    <p> Ke schválení</p>
                   </a>
                 </li>
               </li>
               <li class="nav-item">
                 <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
-                  <i class="far fa-edit nav-icon"></i>
+                  <i class="far fa-list-alt nav-icon"></i>
                   <p>Spravovat články</p>
                 </a>
               </li>
@@ -101,7 +101,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="pages/charts/chartjs.html" class="nav-link">
-                  <i class="far fa-plus nav-icon"></i>
+                  <i class="far fa-plus-square nav-icon"></i>
                   <p>Přidat vydání</p>
                 </a>
               </li>
@@ -124,7 +124,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="pages/charts/chartjs.html" class="nav-link">
-                  <i class="far fa-plus nav-icon"></i>
+                  <i class="far fa-plus-square nav-icon"></i>
                   <p>Přidat uživatele</p>
                 </a>
               </li>
@@ -165,7 +165,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Domů</a></li>
+            <li class="breadcrumb-item"><a href="home.php">Domů</a></li>
             <li class="breadcrumb-item active">Přidat článek</li>
           </ol>
         </div>
@@ -263,5 +263,20 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+
+<script>
+ /** add active class and stay opened when selected */
+var url = window.location;
+
+// for sidebar menu entirely but not cover treeview
+$('ul.sidebar-menu a').filter(function() {
+   return this.href == url;
+}).parent().addClass('active');
+
+// for treeview
+$('ul.treeview-menu a').filter(function() {
+   return this.href == url;
+}).parentsUntil(".sidebar-menu > .treeview-menu").addClass('active');
+    </script>
 </body>
 </html>
