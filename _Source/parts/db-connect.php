@@ -4,6 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 session_start();
 include_once("user.php");
+include_once("cpost.php");
 
 
 $config = parse_ini_file("config.ini"); //fix me later
@@ -21,3 +22,4 @@ try {
 }
 
 $user = new User($db_conn);
+$post = new Post($db_conn);

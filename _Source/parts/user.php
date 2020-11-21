@@ -102,4 +102,8 @@ class User {
 		unset($_SESSION["user-session"]);
 		return true;
 	}
+
+	public function allUsers(){
+		return "null"; //todo
+	}
 }
