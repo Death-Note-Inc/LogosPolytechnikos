@@ -75,7 +75,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
+                <a href="issues.php" class="nav-link">
                   <i class="far fa-edit nav-icon"></i>
                   <p>Spravovat vydání</p>
                 </a>
