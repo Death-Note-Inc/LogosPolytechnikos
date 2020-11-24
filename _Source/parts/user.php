@@ -87,6 +87,17 @@ class User {
 		}
 	}
 
+
+	public function getUsersCount() {
+		$sql = "SELECT id FROM users";
+			$query = $this->db->prepare($sql);
+			$query->execute();
+
+			return $query->rowCount();
+
+	}
+
+
 	public function is_logged_in() {
 		if (isset($_SESSION["user_session"])) {
 			return true;

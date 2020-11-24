@@ -60,7 +60,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
           <!-- small box -->
           <div class="small-box bg-info">
             <div class="inner">
-              <h3>150</h3>
+              <h3><?php echo $post->getWaitingCount() ?></h3>
 
               <p>Nových článků ke schválení</p>
             </div>
@@ -74,7 +74,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
           <!-- small box -->
           <div class="small-box bg-warning">
             <div class="inner">
-              <h3>44</h3>
+              <h3><?php echo $user->getUsersCount() ?></h3>
 
               <p>Zaregistrovaných uživatelů</p>
             </div>
@@ -88,9 +88,9 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
           <!-- small box -->
           <div class="small-box bg-danger">
             <div class="inner">
-              <h3>65</h3>
+              <h3><?php echo $post->getTotalCount() ?></h3>
 
-              <p>Návštěvníků dnes</p>
+              <p>Celkem článků</p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
