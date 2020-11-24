@@ -27,7 +27,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
 
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
-    <?php include_once("parts/nav.php");?>
+    <?php include_once("parts/nav-author.php");?>
 </div>
 <!-- /.sidebar -->
 </aside>
@@ -55,23 +55,29 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
   <!-- Main content -->
   <section class="content">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-6">
         <div class="card card-outline card-info">
-          <div class="card-header">
-            <h3 class="card-title"><b>Zadejte název článku:</b></h3>
-            </br>
-            <input type="text" class="form-control" placeholder="Název...">
-            <!-- /. tools -->
-          </div>
-          <!-- /.card-header -->
-          <div class="card-body pad">
-            <h3 class="card-title"><b>Zadejte obsah článku:</b></h3></br>
-            <div class="mb-3">
-              <textarea class="textarea" placeholder="Place some text here"
-                        style="width: 100%; height: 300px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></br></br></br></br></br></br></br></br></br></textarea>
+        <form role="form">
+          <div class="card-body">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Vložte název článku (povinné)</label>
+              <input type="text" class="form-control" id="articleName" placeholder="Článek 1" required>
+            </div>          
+            <div class="form-group">
+              <label for="exampleInputFile">Níže nahrajte svůj článek ve formátu pdf nebo doc(x)</label>
+              <div class="input-group">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="exampleInputFile">
+                  <label class="custom-file-label" for="exampleInputFile">Vybrat soubor</label>
+                </div>
+              </div>
             </div>
-            <button type="submit" class="btn btn-primary">Odeslat</button> 
           </div>
+          <!-- /.card-body -->
+          <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Odeslat článek</button>
+          </div>
+        </form>
         </div>
       </div>
       <!-- /.col-->
