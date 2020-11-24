@@ -55,9 +55,11 @@
     </div>
   </header>
 
+  
   <!-- Icons Grid -->
   <section class="features-icons bg-light text-center">
     <div class="container">
+    <h2 class="mb-5">Vydání za rok 2020/2021</h2>
       <div class="row">
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
@@ -65,7 +67,7 @@
               <img src="img/vydani.png" alt="Girl in a jacket">
             </div>
             <h3>Mrtví na hladině</h3>
-            <p>Blbaba blabla blabla</p>
+            <p>Vydáno: 11/2020</p>
             <button type="button" class="btn btn-primary">Stáhnout</button>
           </div>
         </div>
@@ -75,7 +77,7 @@
               <img src="img/vydani2.png" alt="Girl in a jacket">
             </div>
             <h3>Lidské cesty</h3>
-            <p>Tedaju juearj jujuja</p>
+            <p>Vydáno: 10/2020</p>
             <button type="button" class="btn btn-primary">Stáhnout</button>
           </div>
         </div>
@@ -85,7 +87,7 @@
               <img src="img/vydani.png" alt="Girl in a jacket">
             </div>
             <h3>Mrtví na hladině</h3>
-            <p>Eararfk okfeaokf okfaokf</p>
+            <p>Vydáno: 9/2020</p>
             <button type="button" class="btn btn-primary">Stáhnout</button>
           </div>
         </div>
@@ -95,7 +97,7 @@
               <img src="img/vydani2.png" alt="Girl in a jacket">
             </div>
             <h3>Mrtví na hladině</h3>
-            <p>Pleald dlaodl oopdad</p>
+            <p>Vydáno: 8/2020</p>
             <button type="button" class="btn btn-primary">Stáhnout</button>
           </div>
         </div>
@@ -105,7 +107,7 @@
               <img src="img/vydani.png" alt="Girl in a jacket">
             </div>
             <h3>Mrtví na hladině</h3>
-            <p>Apdepad apdaed adeaaaad</p>
+            <p>Vydáno: 7/2020</p>
             <button type="button" class="btn btn-primary">Stáhnout</button>
           </div>
         </div>
@@ -116,7 +118,7 @@
                 <img src="img/vydani2.png" alt="Girl in a jacket">
               </div>
               <h3>Mrtví na hladině</h3>
-              <p>Adawdůoe dladkad dadead</p>
+              <p>Vydáno: 6/2020</p>
               <button type="button" class="btn btn-primary">Stáhnout</button>
             </div>
         </div>
