@@ -39,12 +39,12 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Spravovat články</h1>
+          <h1>Posudky - článek 123</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="home.php">Domů</a></li>
-            <li class="breadcrumb-item active">Přidat článek</li>
+            <li class="breadcrumb-item active">Posudky</li>
           </ol>
         </div>
       </div>
@@ -54,39 +54,16 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
   <section class="content">
     <div class="row">
       <div class="col-md-12">
-        <table class="table">
-          <tr>
-            <th>Autor</th>
-            <th>Název</th>
-            <th>Vydání</th>
-            <th>Status</th>
-            <th>Počet verzí</th>
-            <th>Recenzenti</th>
-            <th>Posudky</th>
-            <th>Akce</th>
-          </tr>
-          <?php $post->getAllPost("all"); ?>
-          <tr>
-            <td>Jan Žádník</td>
-            <td>Testovací článek 123</td>
-            <td>1/2020</td>
-            <td>Nově podaný</td>
-            <td>3 <a href="post-history.php">(historie verzí)<a></td>
-            <td>(1) Recenzent domácí</td>
-            <td>(3) <a href="post-history.php">(zobrazit posudky)<a></td>
-            <td><button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>
-          </tr>
-          <tr>
-            <td>Jan Žádník</td>
-            <td>Testovací článek 123</td>
-            <td>1/2020</td>
-            <td>Nově podaný</td>
-            <td>3 <a href="post-history.php">(historie verzí)<a></td>
-            <td><button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>
-          </tr>
-          
-        </table>
+       <div class="callout callout-danger">
+                  <h5>Petr napsal:</h5>
 
+                  <p>Kolego, opravte si název, máte tam chybu</p>
+                </div>
+      <div class="callout callout-warning">
+                  <h5>Josef napsal:</h5>
+
+                  <p>Až na pár chyb dobré</p>
+                </div>
         
       </div>
       <!-- /.col-->

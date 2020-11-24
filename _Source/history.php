@@ -39,12 +39,13 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Spravovat články</h1>
+          <h1>Historie verzí - článek 123</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="home.php">Domů</a></li>
-            <li class="breadcrumb-item active">Přidat článek</li>
+            <li class="breadcrumb-item"><a href="home.php">Články</a></li>
+            <li class="breadcrumb-item active">Historie verzí</li>
           </ol>
         </div>
       </div>
@@ -56,34 +57,17 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
       <div class="col-md-12">
         <table class="table">
           <tr>
-            <th>Autor</th>
-            <th>Název</th>
-            <th>Vydání</th>
-            <th>Status</th>
-            <th>Počet verzí</th>
-            <th>Recenzenti</th>
-            <th>Posudky</th>
+            <th>Verze</th>
+            <th>Datum změny</th>
             <th>Akce</th>
           </tr>
-          <?php $post->getAllPost("all"); ?>
           <tr>
-            <td>Jan Žádník</td>
-            <td>Testovací článek 123</td>
+            <td>1</td>
+            <td>2.10.2020</td>
             <td>1/2020</td>
-            <td>Nově podaný</td>
-            <td>3 <a href="post-history.php">(historie verzí)<a></td>
-            <td>(1) Recenzent domácí</td>
-            <td>(3) <a href="post-history.php">(zobrazit posudky)<a></td>
-            <td><button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>
+            <td><button class="btn-xs btn-primary">Porovnat s aktuální verzí</button></td>
           </tr>
-          <tr>
-            <td>Jan Žádník</td>
-            <td>Testovací článek 123</td>
-            <td>1/2020</td>
-            <td>Nově podaný</td>
-            <td>3 <a href="post-history.php">(historie verzí)<a></td>
-            <td><button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>
-          </tr>
+
           
         </table>
 
