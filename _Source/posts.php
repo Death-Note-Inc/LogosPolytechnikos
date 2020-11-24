@@ -66,25 +66,6 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
             <th>Akce</th>
           </tr>
           <?php $post->getAllPost("all"); ?>
-          <tr>
-            <td>Jan Žádník</td>
-            <td>Testovací článek 123</td>
-            <td>1/2020</td>
-            <td>Nově podaný</td>
-            <td>3 <a href="post-history.php">(historie verzí)<a></td>
-            <td>(1) Recenzent domácí</td>
-            <td>(3) <a href="post-history.php">(zobrazit posudky)<a></td>
-            <td><button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>
-          </tr>
-          <tr>
-            <td>Jan Žádník</td>
-            <td>Testovací článek 123</td>
-            <td>1/2020</td>
-            <td>Nově podaný</td>
-            <td>3 <a href="post-history.php">(historie verzí)<a></td>
-            <td><button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>
-          </tr>
-          
         </table>
 
         
