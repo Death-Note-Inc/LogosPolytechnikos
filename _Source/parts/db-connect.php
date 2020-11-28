@@ -6,6 +6,7 @@ header('Content-type: text/html; charset=utf-8');
 session_start();
 include_once("user.php");
 include_once("cpost.php");
+include_once("cissue.php");
 
 
 $config = parse_ini_file("config.ini"); //fix me later
@@ -24,3 +25,4 @@ try {
 
 $user = new User($db_conn);
 $post = new Post($db_conn);
+$issue = new Issue($db_conn);

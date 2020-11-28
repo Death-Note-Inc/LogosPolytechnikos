@@ -1,3 +1,13 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+//load dependeces
+include_once("parts/db-connect.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="cs">
 
@@ -59,72 +69,82 @@
   <!-- Icons Grid -->
   <section class="features-icons bg-light text-center">
     <div class="container">
-    <h2 class="mb-5">Vydání za rok 2020/2021</h2>
+    <h2>Vydání za rok 2020/2021</h2></br>
       <div class="row">
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="col-xs-1" align="center">
-              <img src="img/vydani.png" alt="Girl in a jacket">
-            </div>
-            <h3>Mrtví na hladině</h3>
-            <p>Vydáno: 11/2020</p>
-            <button type="button" class="btn btn-primary">Stáhnout</button>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="col-xs-1" align="center">
-              <img src="img/vydani2.png" alt="Girl in a jacket">
-            </div>
-            <h3>Lidské cesty</h3>
-            <p>Vydáno: 10/2020</p>
-            <button type="button" class="btn btn-primary">Stáhnout</button>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="col-xs-1" align="center">
-              <img src="img/vydani.png" alt="Girl in a jacket">
-            </div>
-            <h3>Mrtví na hladině</h3>
-            <p>Vydáno: 9/2020</p>
-            <button type="button" class="btn btn-primary">Stáhnout</button>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="col-xs-1" align="center">
-              <img src="img/vydani2.png" alt="Girl in a jacket">
-            </div>
-            <h3>Mrtví na hladině</h3>
-            <p>Vydáno: 8/2020</p>
-            <button type="button" class="btn btn-primary">Stáhnout</button>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="col-xs-1" align="center">
-              <img src="img/vydani.png" alt="Girl in a jacket">
-            </div>
-            <h3>Mrtví na hladině</h3>
-            <p>Vydáno: 7/2020</p>
-            <button type="button" class="btn btn-primary">Stáhnout</button>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-              <div class="col-xs-1" align="center">
-                <img src="img/vydani2.png" alt="Girl in a jacket">
-              </div>
-              <h3>Mrtví na hladině</h3>
-              <p>Vydáno: 6/2020</p>
-              <button type="button" class="btn btn-primary">Stáhnout</button>
-            </div>
-        </div>
+        <?php $issue->getActualIssue("all"); ?>
       </div>
     </div>
+    </br><h2>Starší vydání</h2></br>
+    <?php $issue->getOldIssue("all"); ?>
   </section>
+
+  <!-- Text -->
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm10">
+          <h2 class="text-center">O nás</h2>
+          <p class="text-justify"><b>LOGOS POLYTECHNIKOS je vysokoškolský odborný recenzovaný časopis</b>, který slouží pro publikační aktivity akademických pracovníků Vysoké školy polytechnické Jihlava i jiných vysokých škol, univerzit a výzkumných organizací. Je veden na seznamu recenzovaných odborných a vědeckých časopisů ERIH PLUS - European Reference Index for the Humanities and the Social Sciences (https://dbh.nsd.uib.no/publiseringskanaler/erihplus/periodical/info?id=488187).</p>
+          <p class="text-justify">Od roku 2010 do roku 2018 byl časopis vydáván čtyřikrát ročně v elektronické a tištěné podobě. Od roku 2019 vychází třikrát ročně v elektronické verzi. Redakční rada časopisu sestává z interních i externích odborníků. Funkci šéfredaktora zastává prorektor pro tvůrčí a projektovou činnost Vysoké školy polytechnické Jihlava. Funkce odpovědných redaktorů jednotlivých čísel přísluší vedoucím kateder Vysoké školy polytechnické Jihlava. Veškeré vydávané příspěvky prochází recenzním řízením a jsou pečlivě redigovány. </p>  
+          <p class="text-justify"><b>Tematické a obsahové zaměření časopisu</b> reflektuje potřeby oborových kateder Vysoké školy polytechnické Jihlava. Na základě souhlasu odpovědného redaktora mohou katedry poskytnout publikační prostor i odborníkům bez zaměstnanecké vazby k Vysoké škole polytechnické Jihlava.</p>
+          <p class="text-justify"><b>V časopise je možné publikovat</b> odborné články, statě, přehledové studie, recenze a další typy odborných příspěvků v českém, slovenském a anglickém jazyce. Do recenzního řízení jsou přijímány příspěvky tematicky odpovídající zaměření časopisu a formálně upravené dle redakční šablony (viz níže).</p>
+          
+          <h2 class="text-center">Pro autory (přispěvatele)</h2>
+          <p class="text-justify">
+            <a href="#">Pokyny pro přispěvatele</a></br>
+            <a href="#">Šablona</a></br>
+            <a href="#">Recenzní řízení</a></br>
+          </p>
+          <p class="text-justify">Lze publikovat v jazycích: angličtina, čeština a slovenština </p>
+          <p class="text-justify">Pokud rozsah doručených příspěvků překročí kapacitu příslušného vydání, bude přijímání příspěvků ukončeno před uvedeným termínem. </p>
+          
+          <h2 class="text-center">Termíny uzávěrek pro sběr příspěvků</h2>
+          <p class="text-justify">
+            <ul>
+              <li>1/2020 - ošetřovatelství, porodní asistence a další zdravotnické obory (31. 12. 2019)</br>  </li>
+              <li>2/2020 - ošetřovatelství, porodní asistence a další zdravotnické obory, sociologie, sport, psychologie, sociální práce (30. 4. 2020) </br> </li>
+              <li>3/2020 - ekonomika, management, marketing, statistika, operační výzkum, finanční matematika, pojišťovniství, cestovní ruch, regionální rozvoj, veřejná správa (31. 8. 2020)</li>
+            </ul> 
+          </p>  
+          
+          <h2 class="text-center">Redakce</h2>
+          <h3>Šéfrefaktor</h3>
+          <ul>  
+          <li>doc. Ing. Zdeněk Horák, Ph.D. (Vysoká škola polytechnická Jihlava)</li>
+          </ul>
+          <h3>Redakční rada</h3>
+          <ul>
+            <li>prof. PhDr. RNDr. Martin Boltižiar, PhD. (Univerzita Konštantína Filozofa v Nitre)</li>
+            <li>prof. RNDr. Helena Brožová, CSc. (Česká zemědělská univerzita v Praze)</li>
+            <li>doc. PhDr. Lada Cetlová, PhD. (Vysoká škola polytechnická Jihlava)</li>
+            <li>prof. Mgr. Ing. Martin Dlouhý, Dr. MSc. (Vysoká škola ekonomická v Praze)</li>
+            <li>prof. Ing. Tomáš Dostál, DrSc. (Vysoká škola polytechnická Jihlava)</li>
+            <li>doc. Ing. Jiří Dušek, Ph.D. (Vysoká škola evropských a regionálních studií)</li>
+            <li>doc. RNDr. Petr Gurka, CSc. (Vysoká škola polytechnická Jihlava)</li>
+            <li>Ing. Veronika Hedija, Ph.D. (Vysoká škola polytechnická Jihlava)</li>
+            <li>doc. Ing. Zdeněk Horák, Ph.D. (Vysoká škola polytechnická Jihlava)</li>
+            <li>Ing. Ivica Linderová, PhD. (Vysoká škola polytechnická Jihlava)</li>
+            <li>prof. MUDr. Aleš Roztočil, CSc. (Vysoká škola polytechnická Jihlava)</li>
+            <li>doc. PhDr. David Urban, Ph.D. (Vysoká škola polytechnická Jihlava)</li>
+            <li>doc. Dr. Ing. Jan Voráček, CSc. (Vysoká škola polytechnická Jihlava)</li>
+            <li>RNDr. PaedDr. Ján Veselovský, PhD. (Univerzita Konštantína Filozofa v Nitre)</li>
+            <li>doc. Ing. Libor Žídek, Ph.D. (Masarykova univerzita Brno)</li>
+          </ul>
+
+          <h2 class="text-center">Kontakt</h2>
+          <p class="text-justify">Adresa pro odesílání příspěvků: logos@vspj.cz</p>
+          <p class="text-justify">Kontaktní osoba: Bc. Zuzana Mafková: zuzana.mafkova@vspj.cz</p>
+
+          <p class="text-justify">Adresa nakladatele: Vysoká škola polytechnická Jihlava, redakce LOGOS POLYTECHNIKOS, Tolstého 1556/16, 586 01 Jihlava</p>
+
+
+          <p class="text-justify"><b>ISSN 2464-7551 (Online)</b></p>
+          <p class="text-justify">Registrace MK ČR E 19390 – pro čísla z let 2010 až 2018 (vydávání tištěné verze časopisu bylo ukončeno).</p>
+          <p class="text-justify">ISSN 1804-3682 (Print) – pro čísla z let 2010 až 2018 (vydávání tištěné verze časopisu bylo ukončeno). </p>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+  </div>
 
   <!-- Call to Action -->
   <section class="call-to-action text-white text-center">
@@ -153,8 +173,8 @@
   <!-- Footer -->
   <footer class="footer bg-light">
     <div class="container">
-        <div class="text-center my-auto">
-          <p>&copy; LOGOS POLYTECHNIKOS 2020. Created by Death Note.</p>
+        <div class="text-center">
+          &copy; LOGOS POLYTECHNIKOS 2020. Created by Death Note.
       </div>
     </div>
   </footer>
