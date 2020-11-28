@@ -79,7 +79,7 @@ class Issue {
 				echo '<td>'. $returned_row["issue_date"].'</td>';
 				echo '<td>'. $returned_row["issue_status"].'</td>';
 				echo '<td>'. $randomNumber.'</td>';
-				echo '<td><button class="btn-xs btn-primary">Zobrazit</button></td>';
+				echo '<td><button class="btn-xs btn-success">Zobrazit</button></td>';
 				echo '</tr>';
 			}
 		} else echo "Nenalezeno žádné starší vydání";
@@ -97,7 +97,7 @@ class Issue {
 				echo '<td>'. $returned_row["issue_date"].'</td>';
 				echo '<td>'. $returned_row["issue_status"].'</td>';
 				echo '<td>'. $randomNumber.'</td>';
-				echo '<td><button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>';
+				echo '<td><button class="btn-xs btn-success">Zobrazit</button> <button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>';
 				echo '</tr>';
 			}
 		} else echo "Nenalezeno žádné starší vydání";
