@@ -62,21 +62,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
             <th>Počet článků</th>
             <th>Akce</th>
           </tr>
-          <!-- <?php $post->getAllPost("all"); ?> -->
-          <tr>
-            <td>Mrtví na hladině</td>
-            <td>Listopad 2020</td>
-            <td>Zpracovává se</td>
-            <td>21</td>
-            <td><button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>
-          </tr>
-          <tr>
-            <td>Lidské cesty</td>
-            <td>Říjen 2020</td>
-            <td>Dokončen</td>
-            <td>18</td>
-            <td><button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>
-          </tr>
+          <?php $issue->getAllIssue("all"); ?>
           
         </table>
 
