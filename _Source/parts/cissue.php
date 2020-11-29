@@ -68,39 +68,55 @@ class Issue {
 	}	
 
 	public function getAllIssue(){
-		$sql = 'SELECT issue.name as issue_name, DATE_FORMAT(issue.date, "%m/%Y") as issue_date, issue.id as issue_id, issue.status as issue_status FROM issue ORDER BY issue.id DESC;';
+		$sql = 'SELECT issue.id as issue_id, issue.name as issue_name, DATE_FORMAT(issue.date, "%m/%Y") as issue_date, issue.id as issue_id, issue.status as issue_status FROM issue ORDER BY issue.id DESC;';
 		$query = $this->db->prepare($sql);
 		$query->execute();
 		if ($query->rowCount() > 0) {
 			foreach ($query as $returned_row) {
-				$randomNumber = rand(5,30);
 				echo '<tr>';
 				echo '<td>'.$returned_row["issue_name"].'</td>';
 				echo '<td>'. $returned_row["issue_date"].'</td>';
 				echo '<td>'. $returned_row["issue_status"].'</td>';
-				echo '<td>'. $randomNumber.'</td>';
-				echo '<td><button class="btn-xs btn-success">Zobrazit</button></td>';
+				//echo '<td>'. $returned_row["post_number"].'</td>'; ZOBRAZIT AKTUALNI POCET CLANKU VE VYDANI
+				echo '<td><a href="./issues-posts.php?id=' . $returned_row["issue_id"] . '"><button class="btn-xs btn-success">Zobrazit</button></a></td>';
 				echo '</tr>';
 			}
 		} else echo "Nenalezeno žádné starší vydání";
 	}	
 
 	public function getAllIssueManage(){
-		$sql = 'SELECT issue.name as issue_name, DATE_FORMAT(issue.date, "%m/%Y") as issue_date, issue.id as issue_id, issue.status as issue_status FROM issue ORDER BY issue.id DESC;';
+		$sql = 'SELECT issue.id as issue_id, issue.name as issue_name, DATE_FORMAT(issue.date, "%m/%Y") as issue_date, issue.id as issue_id, issue.status as issue_status FROM issue ORDER BY issue.id DESC;';
 		$query = $this->db->prepare($sql);
 		$query->execute();
 		if ($query->rowCount() > 0) {
 			foreach ($query as $returned_row) {
-				$randomNumber = rand(5,30);
 				echo '<tr>';
 				echo '<td>'.$returned_row["issue_name"].'</td>';
 				echo '<td>'. $returned_row["issue_date"].'</td>';
 				echo '<td>'. $returned_row["issue_status"].'</td>';
-				echo '<td>'. $randomNumber.'</td>';
-				echo '<td><button class="btn-xs btn-success">Zobrazit</button> <button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>';
+				//echo '<td>'. $returned_row["post_number"].'</td>'; ZOBRAZIT AKTUALNI POCET CLANKU VE VYDANI
+				echo '<td><a href="./issues-posts.php?id=' . $returned_row["issue_id"] . '"><button class="btn-xs btn-success">Zobrazit</button></a> <button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>';
 				echo '</tr>';
 			}
 		} else echo "Nenalezeno žádné starší vydání";
 	}	
+
+	function getIssueInfo($information) {
+		$ID = ($_GET['id']);
+		$sql = "SELECT * FROM issue WHERE id = '$ID'";
+		$query = $this->db->prepare($sql);
+		$query->execute();
+		$returned_row = $query->fetch(PDO::FETCH_ASSOC);
+		switch ($information) {
+			case 'name':
+				return $returned_row["name"];
+				break;
+			
+			default:
+				return false;
+				break;
+
+		}
+	}
 
 }

@@ -10,8 +10,7 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="info">
-        <a href="#" class="d-block"><?php echo $user->getUserInfo("name") ." ". $user->getUserInfo("surname"); ?></a>
-        <a href="#" class="d-block"><?php echo "Autor" ?></a>
+        <a href="#" class="d-block"><?php echo $user->getUserInfo("name") ." ". $user->getUserInfo("surname") . '<br>' . $user->getUserInfo("role"); ?></a>
       </div>
     </div>
 
@@ -22,7 +21,7 @@
            with font-awesome or any other icon font library -->
            <li class="nav-item">
             <a href="home.php" class="nav-link active">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-home"></i>
               <p>
                 Homepage
               </p>
@@ -40,10 +39,17 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="add-post.php" class="nav-link">
+                <a href="post-add.php" class="nav-link">
                   <i class="far fa-edit nav-icon"></i>
                   <p>Přidat článek</p>
                 </a>
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                    <i class="far fa-check-square nav-icon"></i>
+                    <span class="badge badge-warning right"><?php echo($post->getWaitingCount())?></span>
+                    <p>Ke schválení</p>
+                  </a>
+                </li>
               </li>
               <li class="nav-item">
                 <a href="posts.php" class="nav-link">
@@ -63,9 +69,15 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="issues.php" class="nav-link">
+                <a href="pages/charts/chartjs.html" class="nav-link">
+                  <i class="far fa-plus-square nav-icon"></i>
+                  <p>Přidat vydání</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="issues-manage.php" class="nav-link">
                   <i class="far fa-edit nav-icon"></i>
-                  <p>Seznam vydání</p>
+                  <p>Spravovat vydání</p>
                 </a>
               </li>
             </ul>

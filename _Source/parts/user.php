@@ -14,6 +14,9 @@ class User {
 			$query->execute();
 			$returned_row = $query->fetch(PDO::FETCH_ASSOC);
 			switch ($information) {
+				case 'id':
+					return $returned_row["id"];
+					break;		
 				case 'name':
 					return $returned_row["name"];
 					break;

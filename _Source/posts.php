@@ -27,7 +27,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
 
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
-    <?php include_once("parts/nav.php");?>
+    <?php include_once("parts/nav-".$user->getUserInfo("role").".php");?>
 </div>
 
 
@@ -65,7 +65,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
             <th>Posudky</th>
             <th>Akce</th>
           </tr>
-          <?php $post->getAllPost("all"); ?>
+          <?php $post->getAllPost("all"); // ZOBRAZIT JEN POSTY PRO DANEHO AUTORA NEBO VSECHNY POKUD JE TO REDAKTOR/SEFREDAKTOR?> 
         </table>
 
         

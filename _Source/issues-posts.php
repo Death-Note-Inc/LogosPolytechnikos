@@ -39,13 +39,17 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Historie verzí - článek 123</h1>
+          <h1>
+            Články ve vydání - 
+            <?php
+                echo $issue->getIssueInfo("name");
+            ?>
+          </h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="home.php">Domů</a></li>
-            <li class="breadcrumb-item"><a href="home.php">Články</a></li>
-            <li class="breadcrumb-item active">Historie verzí</li>
+            <li class="breadcrumb-item active">Přidat článek</li>
           </ol>
         </div>
       </div>
@@ -57,18 +61,15 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
       <div class="col-md-12">
         <table class="table">
           <tr>
-            <th>Verze</th>
-            <th>Datum změny</th>
+            <th>Autor</th>
+            <th>Název</th>
+            <th>Status</th>
+            <th>Počet verzí</th>
+            <th>Recenzenti</th>
+            <th>Posudky</th>
             <th>Akce</th>
           </tr>
-          <tr>
-            <td>1</td>
-            <td>2.10.2020</td>
-            <td>1/2020</td>
-            <td><button class="btn-xs btn-primary">Porovnat s aktuální verzí</button></td>
-          </tr>
-
-          
+          <?php $post->getIssuePosts("all"); ?>
         </table>
 
         
