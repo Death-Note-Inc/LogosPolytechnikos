@@ -29,6 +29,9 @@ class User {
 				case 'role':
 					return $returned_row["role"];
 					break;
+				case 'id':
+					return $returned_row["id"];
+					break;
 				
 				default:
 					return false;

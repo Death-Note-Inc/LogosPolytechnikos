@@ -57,17 +57,17 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
     <div class="row">
       <div class="col-md-6">
         <div class="card card-outline card-info">
-        <form role="form">
+        <form role="form" action="parts/upload.php" method="post" enctype="multipart/form-data">
           <div class="card-body">
             <div class="form-group">
               <label for="exampleInputEmail1">Vložte název článku (povinné)</label>
-              <input type="text" class="form-control" id="articleName" placeholder="Článek 1" required>
+              <input type="text" class="form-control" name="articleName" id="articleName" placeholder="Článek 1" required>
             </div>          
             <div class="form-group">
               <label for="exampleInputFile">Níže nahrajte svůj článek ve formátu pdf nebo doc(x)</label>
               <div class="input-group">
                 <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="exampleInputFile">
+                  <input type="file" required class="custom-file-input" accept= "application/msword,application/pdf" id="fileToUpload" name="fileToUpload">
                   <label class="custom-file-label" for="exampleInputFile">Vybrat soubor</label>
                 </div>
               </div>
