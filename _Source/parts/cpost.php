@@ -41,8 +41,9 @@ class Post {
 
 	}
 
-	public function getAllPost(){
-		$sql = 'SELECT users.name as user_name, post.name as post_name, count(post.id) as versions, users.surname as user_surname, issue.name as issue_name, post.status FROM post LEFT JOIN users on post.author_id = users.id LEFT JOIN issue on issue.id = post.issue_id LEFT JOIN post_meta on post_meta.post_id = post.id WHERE post_meta.post_id = post.id GROUP BY post.id;';
+	public function getAllPost($userID){
+		$sql = 'SELECT users.name as user_name, users.id, post.name as post_name, count(post.id) as versions, users.surname as user_surname, issue.name as issue_name, post.status FROM post 
+		LEFT JOIN users on post.author_id = users.id LEFT JOIN issue on issue.id = post.issue_id WHERE users.id = '.$userID.'  GROUP BY post.id;';		
 		$query = $this->db->prepare($sql);
 		$query->execute();
 		if ($query->rowCount() > 0) {

@@ -67,7 +67,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
               <p>Nových článků ke schválení</p>
             </div>
             <div class="icon">
-              <i class="ion ion-bag"></i>
+              <i class="ion ion-stats-bars"></i>
             </div>
           </div>
         </div>
