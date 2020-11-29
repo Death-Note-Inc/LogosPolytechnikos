@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Logos Polytechnikos | Admin</title>
+  <title>Logos Polytechnikos | <?php echo $user->getUserInfo("role"); ?></title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
