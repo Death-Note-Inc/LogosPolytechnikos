@@ -91,7 +91,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
+                <a href="users-manage.php" class="nav-link">
                   <i class="far fa-edit nav-icon"></i>
                   <p>Spravovat uživatele</p>
                 </a>

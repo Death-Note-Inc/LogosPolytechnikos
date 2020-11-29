@@ -123,4 +123,21 @@ class User {
 	public function allUsers(){
 		return "null"; //todo
 	}
+
+	public function getAllUsers(){
+		$sql = 'SELECT users.id as user_id, users.name as user_firstname, users.surname as user_lastname, users.email as user_email, users.role as user_role FROM users';		
+		$query = $this->db->prepare($sql);
+		$query->execute();
+		if ($query->rowCount() > 0) {
+			foreach ($query as $returned_row) {
+				echo '<td>' .$returned_row["user_id"] .'</td>';
+				echo '<td>' .$returned_row["user_firstname"] .'</td>';
+				echo '<td>' .$returned_row["user_lastname"] .'</td>';
+				echo '<td>' .$returned_row["user_email"] .'</td>';
+				echo '<td>' .$returned_row["user_role"] .'</td>';
+				echo '<td><button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>';
+				echo "</tr>";
+			}
+		} else echo "nenalezen žádný článek";
+	}
 }
