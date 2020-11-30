@@ -44,7 +44,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="home.php">Domů</a></li>
-            <li class="breadcrumb-item active">Přidat článek</li>
+            <li class="breadcrumb-item active">Spravovat články</li>
           </ol>
         </div>
       </div>

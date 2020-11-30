@@ -44,7 +44,7 @@
                   <p>Přidat článek</p>
                 </a>
                 <li class="nav-item">
-                  <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-check-square nav-icon"></i>
                     <span class="badge badge-warning right"><?php echo($post->getWaitingCount())?></span>
                     <p>Ke schválení</p>

@@ -33,7 +33,7 @@ if (isset($_POST['log_in'])) {
 <body class="hold-transition login-page">
   <div class="login-box">
     <div class="login-logo">
-      <a href="../../index2.html"><b>Logos</b>Polytechnikos</a>
+      <a href="../index.php"><b>Logos</b>Polytechnikos</a>
     </div>
     <!-- /.login-logo -->
     <div class="card">
