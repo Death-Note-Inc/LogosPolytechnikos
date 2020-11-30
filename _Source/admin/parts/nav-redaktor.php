@@ -83,7 +83,15 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="?logout=true" class="nav-link">
+            <a href="dokumentace.pdf" class="nav-link" target="_blank">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Dokumentace
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="?logout=true" class="nav-link" >
               <i class="nav-icon fas fa-power-off"></i>
               <p>
                 Odhlásit se

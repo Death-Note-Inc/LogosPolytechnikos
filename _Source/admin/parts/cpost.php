@@ -55,7 +55,8 @@ class Post {
 				echo '<td>' .$returned_row["versions"] .'</td>';
 				echo '<td><a href="">Zobrazit recenzenty</td>';
 				echo '<td><a href="">Zobrazit posudky</a></td>';
-				echo '<td><button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>';
+				//echo '<td><button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>';
+				echo '<td><a href="#"><button class="btn-xs btn-success">Zobrazit</button></a></td>';
 				echo "</tr>"; //todo
 			}
 		} else echo "nenalezen žádný článek";
