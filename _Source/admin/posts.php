@@ -66,8 +66,13 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
             <th>Akce</th>
           </tr>
           <?php           
-            $userID = $user->getUserInfo("id");
-            $post->getAllPost($userID); // ZOBRAZIT JEN POSTY PRO DANEHO AUTORA NEBO VSECHNY POKUD JE TO REDAKTOR/SEFREDAKTOR?> 
+            if ($user->getUserInfo("id") == "autor") {
+              $userID = $user->getUserInfo("id");
+              $post->getAllPostUser($userID); // ZOBRAZIT JEN POSTY PRO DANEHO AUTORA NEBO VSECHNY POKUD JE TO REDAKTOR/SEFREDAKTOR
+            }
+            else
+              $post->getAllPost();
+          ?> 
         </table>
 
         
