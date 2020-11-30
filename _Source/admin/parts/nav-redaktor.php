@@ -69,7 +69,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-plus-square nav-icon"></i>
                   <p>Přidat vydání</p>
                 </a>
