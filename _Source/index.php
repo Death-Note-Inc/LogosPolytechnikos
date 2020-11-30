@@ -92,9 +92,9 @@ include_once("admin/parts/db-connect.php");
           
           <h2 class="text-center">Pro autory (přispěvatele)</h2>
           <p class="text-justify">
-            <a href="#">Pokyny pro přispěvatele</a></br>
-            <a href="#">Šablona</a></br>
-            <a href="#">Recenzní řízení</a></br>
+            <a href="http://www.vspj.cz/soubory/download/id/7344">Pokyny pro přispěvatele</a></br>
+            <a href="https://www.vspj.cz/soubory/download/id/4186">Šablona</a></br>
+            <a href="http://www.vspj.cz/soubory/download/id/7345">Recenzní řízení</a></br>
           </p>
           <p class="text-justify">Lze publikovat v jazycích: angličtina, čeština a slovenština </p>
           <p class="text-justify">Pokud rozsah doručených příspěvků překročí kapacitu příslušného vydání, bude přijímání příspěvků ukončeno před uvedeným termínem. </p>
