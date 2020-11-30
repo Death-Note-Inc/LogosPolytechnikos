@@ -62,7 +62,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
             <th>Počet článků</th>
             <th>Akce</th>
           </tr>
-          <?php $issue->getAllIssue("all"); ?>
+          <?php $issue->getAllIssue(); ?>
           
         </table>
 

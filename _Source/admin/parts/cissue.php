@@ -68,7 +68,8 @@ class Issue {
 	}	
 
 	public function getAllIssue(){
-		$sql = 'SELECT issue.id as issue_id, issue.name as issue_name, DATE_FORMAT(issue.date, "%m/%Y") as issue_date, issue.id as issue_id, issue.status as issue_status FROM issue ORDER BY issue.id DESC;';
+		$sql = 'SELECT issue.id as issue_id, issue.name as issue_name, DATE_FORMAT(issue.date, "%m/%Y") as issue_date, issue.status as issue_status, count(post.issue_id) as post_number FROM issue
+		LEFT JOIN post on post.issue_id = issue.id GROUP BY issue.id DESC;';
 		$query = $this->db->prepare($sql);
 		$query->execute();
 		if ($query->rowCount() > 0) {
@@ -77,7 +78,7 @@ class Issue {
 				echo '<td>'.$returned_row["issue_name"].'</td>';
 				echo '<td>'. $returned_row["issue_date"].'</td>';
 				echo '<td>'. $returned_row["issue_status"].'</td>';
-				//echo '<td>'. $returned_row["post_number"].'</td>'; ZOBRAZIT AKTUALNI POCET CLANKU VE VYDANI
+				echo '<td>'. $returned_row["post_number"].'</td>'; 
 				echo '<td><a href="./issues-posts.php?id=' . $returned_row["issue_id"] . '"><button class="btn-xs btn-success">Zobrazit</button></a></td>';
 				echo '</tr>';
 			}
@@ -85,7 +86,8 @@ class Issue {
 	}	
 
 	public function getAllIssueManage(){
-		$sql = 'SELECT issue.id as issue_id, issue.name as issue_name, DATE_FORMAT(issue.date, "%m/%Y") as issue_date, issue.id as issue_id, issue.status as issue_status FROM issue ORDER BY issue.id DESC;';
+		$sql = 'SELECT issue.id as issue_id, issue.name as issue_name, DATE_FORMAT(issue.date, "%m/%Y") as issue_date, issue.status as issue_status, count(post.issue_id) as post_number FROM issue
+		LEFT JOIN post on post.issue_id = issue.id GROUP BY issue.id DESC;';		
 		$query = $this->db->prepare($sql);
 		$query->execute();
 		if ($query->rowCount() > 0) {
@@ -94,7 +96,7 @@ class Issue {
 				echo '<td>'.$returned_row["issue_name"].'</td>';
 				echo '<td>'. $returned_row["issue_date"].'</td>';
 				echo '<td>'. $returned_row["issue_status"].'</td>';
-				//echo '<td>'. $returned_row["post_number"].'</td>'; ZOBRAZIT AKTUALNI POCET CLANKU VE VYDANI
+				echo '<td>'. $returned_row["post_number"].'</td>';
 				echo '<td><a href="./issues-posts.php?id=' . $returned_row["issue_id"] . '"><button class="btn-xs btn-success">Zobrazit</button></a> <button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>';
 				echo '</tr>';
 			}
