@@ -19,7 +19,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 // Check if file already exists
 if (file_exists($target_file)) {
-	echo "Sorry, file already exists.";
+	echo "Soubor již existuje.";
 	$uploadOk = 0;
 }
 
@@ -28,7 +28,7 @@ if (file_exists($target_file)) {
 
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
-	echo "Sorry, your file was not uploaded.";
+	echo "Soubor nebyl nahrán.";
 // if everything is ok, try to upload file
 } else {
 
@@ -41,9 +41,9 @@ if ($uploadOk == 0) {
 	$dir = "../uploads/" .$post_id;
 	mkdir($dir,0777,true);
 	if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "../uploads/" .$post_id ."/".$_FILES["fileToUpload"]["name"])) {
-		echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " Byl nahrán.";
+		echo "Soubor ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " byl nahrán.";
 	} else {
-		echo "Sorry, there was an error uploading your file.";
+		echo "Nelze nahrát Váš soubor.";
 	}
 }
 

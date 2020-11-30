@@ -31,7 +31,7 @@ class Post {
 
 	}
 
-		public function getLastestPost() {
+	public function getLastestPost() {
 		$sql = "SELECT MAX(id) FROM post";
 		$query = $this->db->prepare($sql);
 		$query->execute();
@@ -100,6 +100,12 @@ class Post {
 			}
 		} else echo "nenalezen žádný článek";
 	}
+
+	public function create($id, $stav, $nazev){
+		$sql = "INSERT INTO post(author_id, status, name) VALUES('$id','$stav','$nazev');";
+		$query = $this->db->prepare($sql);
+		$query->execute();
+	}	
 
 }
 
