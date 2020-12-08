@@ -48,7 +48,7 @@ include_once("admin/parts/db-connect.php");
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5">LOGOS POLYTECHNIKOS</h1>
+          <h1 class="mb-5">LOGOS POLYTECHNIKOS je vysokoškolský odborný recenzovaný časopis...</h1>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
           <form>
@@ -75,47 +75,22 @@ include_once("admin/parts/db-connect.php");
         <?php $issue->getActualIssue("all"); ?>
       </div>
     </div>
-<!--
     </br><h2>Starší vydání</h2></br>
     <?php $issue->getOldIssue("all"); ?>
-!-->
   </section>
 
-
-
-<div class="container features">
-  <div class="row">
-    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-      <h3 class="feature-title">O nás</h3>
-      <p><b>LOGOS POLYTECHNIKOS je vysokoškolský odborný časopis.</b> </p>
-
-
-       <button type="button" onclick="UkazInfo()" class="btn btn-primary">O nás</button>
-
-    </div>
-
-    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-      <h3 class="feature-title">Kontakt</h3>
-
-      <p><b>Informace pro kontaktování redakce našeho časopisu.</b></p>
-        <button type="button" onclick="UkazKontakt()" class="btn btn-primary">Kontakty</button>
-
-    </div>
-
-  </div> 
-</div>
-
-    <div id="UkazInfo">
-  
-<div class="container features">
-  <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12">
-<p class="text-justify">Slouží pro publikační aktivity akademických pracovníků Vysoké školy polytechnické Jihlava i jiných vysokých škol, univerzit a výzkumných organizací. Je veden na seznamu recenzovaných odborných a vědeckých časopisů s  <a href="https://dbh.nsd.uib.no/publiseringskanaler/erihplus/periodical/info?id=488187">ERIH PLUS - European Reference Index for the Humanities and the Social Science</a>.</p>
-       <p class="text-justify">Od roku 2010 do roku 2018 byl časopis vydáván čtyřikrát ročně v elektronické a tištěné podobě. Od roku 2019 vychází třikrát ročně v elektronické verzi. Redakční rada časopisu sestává z interních i externích odborníků. Funkci šéfredaktora zastává prorektor pro tvůrčí a projektovou činnost Vysoké školy polytechnické Jihlava. Funkce odpovědných redaktorů jednotlivých čísel přísluší vedoucím kateder Vysoké školy polytechnické Jihlava. Veškeré vydávané příspěvky prochází recenzním řízením a jsou pečlivě redigovány. </p>  
+  <!-- Text -->
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm10">
+          <h2 class="text-center">O nás</h2>
+          <p class="text-justify"><b>LOGOS POLYTECHNIKOS je vysokoškolský odborný recenzovaný časopis</b>, který slouží pro publikační aktivity akademických pracovníků Vysoké školy polytechnické Jihlava i jiných vysokých škol, univerzit a výzkumných organizací. Je veden na seznamu recenzovaných odborných a vědeckých časopisů ERIH PLUS - European Reference Index for the Humanities and the Social Sciences (https://dbh.nsd.uib.no/publiseringskanaler/erihplus/periodical/info?id=488187).</p>
+          <p class="text-justify">Od roku 2010 do roku 2018 byl časopis vydáván čtyřikrát ročně v elektronické a tištěné podobě. Od roku 2019 vychází třikrát ročně v elektronické verzi. Redakční rada časopisu sestává z interních i externích odborníků. Funkci šéfredaktora zastává prorektor pro tvůrčí a projektovou činnost Vysoké školy polytechnické Jihlava. Funkce odpovědných redaktorů jednotlivých čísel přísluší vedoucím kateder Vysoké školy polytechnické Jihlava. Veškeré vydávané příspěvky prochází recenzním řízením a jsou pečlivě redigovány. </p>  
           <p class="text-justify"><b>Tematické a obsahové zaměření časopisu</b> reflektuje potřeby oborových kateder Vysoké školy polytechnické Jihlava. Na základě souhlasu odpovědného redaktora mohou katedry poskytnout publikační prostor i odborníkům bez zaměstnanecké vazby k Vysoké škole polytechnické Jihlava.</p>
           <p class="text-justify"><b>V časopise je možné publikovat</b> odborné články, statě, přehledové studie, recenze a další typy odborných příspěvků v českém, slovenském a anglickém jazyce. Do recenzního řízení jsou přijímány příspěvky tematicky odpovídající zaměření časopisu a formálně upravené dle redakční šablony (viz níže).</p>
-
-           <h2 class="text-center">Pro autory (přispěvatele)</h2>
+          
+          <h2 class="text-center">Pro autory (přispěvatele)</h2>
           <p class="text-justify">
             <a href="http://www.vspj.cz/soubory/download/id/7344">Pokyny pro přispěvatele</a></br>
             <a href="https://www.vspj.cz/soubory/download/id/4186">Šablona</a></br>
@@ -157,21 +132,8 @@ include_once("admin/parts/db-connect.php");
             <li>doc. Ing. Libor Žídek, Ph.D. (Masarykova univerzita Brno)</li>
           </ul>
 
-          <button type="button" onclick="UkazInfo()" class="btn btn-primary">Zpět</button>
-    </div>
-  </div> 
-</div>
-
-</div>
-
-<div id="UkazKontakt">
-  
-<div class="container features">
-  <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12">
-
-
-     <p class="text-justify">Adresa pro odesílání příspěvků: logos@vspj.cz</p>
+          <h2 class="text-center">Kontakt</h2>
+          <p class="text-justify">Adresa pro odesílání příspěvků: logos@vspj.cz</p>
           <p class="text-justify">Kontaktní osoba: Bc. Zuzana Mafková: zuzana.mafkova@vspj.cz</p>
 
           <p class="text-justify">Adresa nakladatele: Vysoká škola polytechnická Jihlava, redakce LOGOS POLYTECHNIKOS, Tolstého 1556/16, 586 01 Jihlava</p>
@@ -180,12 +142,10 @@ include_once("admin/parts/db-connect.php");
           <p class="text-justify"><b>ISSN 2464-7551 (Online)</b></p>
           <p class="text-justify">Registrace MK ČR E 19390 – pro čísla z let 2010 až 2018 (vydávání tištěné verze časopisu bylo ukončeno).</p>
           <p class="text-justify">ISSN 1804-3682 (Print) – pro čísla z let 2010 až 2018 (vydávání tištěné verze časopisu bylo ukončeno). </p>
- <button type="button" onclick="UkazKontakt()" class="btn btn-primary">Zpět</button>
+        </div>
+        <div class="col-sm-1"></div>
     </div>
-  </div> 
-</div>
-
-</div>
+  </div>
 
   <!-- Call to Action -->
   <section class="call-to-action text-white text-center">
@@ -211,9 +171,6 @@ include_once("admin/parts/db-connect.php");
     </div>
   </section>
 
- 
-
-
   <!-- Footer -->
   <footer class="footer bg-light">
     <div class="container">
@@ -226,56 +183,6 @@ include_once("admin/parts/db-connect.php");
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <script type="text/javascript">
-    
-    function UkazInfo() {
-  var x = document.getElementById("UkazInfo");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-    var x = document.getElementById("UkazKontakt");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  }
-} 
-
-    function UkazKontakt() {
-  var x = document.getElementById("UkazKontakt");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-    var x = document.getElementById("UkazInfo");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } 
-} 
-
-  </script>
-  <style type="text/css">
-  #UkazInfo {
-  width: 100%;
-  padding: 50px 0;
-  text-align: center;
-  background-color: white;
-  margin-top: 20px;
-  display:none;
-}
-
-#UkazKontakt {
-  width: 100%;
-  padding: 50px 0;
-  text-align: center;
-  background-color: white;
-  margin-top: 20px;
-  display:none;
-}
-  </style>
-
 
 </body>
 
