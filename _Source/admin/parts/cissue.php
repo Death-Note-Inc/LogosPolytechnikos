@@ -121,4 +121,11 @@ class Issue {
 		}
 	}
 
+	public function create_issue($name, $date, $status){
+		$sql = "INSERT INTO issue(name, date, status) VALUES('$name','$date', '$status');";
+		$query = $this->db->prepare($sql);
+		$query->execute();
+	}	
+
+
 }
