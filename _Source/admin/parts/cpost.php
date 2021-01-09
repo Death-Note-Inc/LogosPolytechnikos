@@ -42,7 +42,7 @@ class Post {
 	}
 
 	public function getAllPost(){
-		$sql = 'SELECT users.name as user_name, users.id, post.name as post_name, count(post.id) as versions, users.surname as user_surname, issue.name as issue_name, post.status FROM post 
+		$sql = 'SELECT users.name as user_name, users.id, post.name as post_name, count(post.id) as versions, users.surname as user_surname, issue.name as issue_name, post.status, post.id as post_id FROM post 
 		 LEFT JOIN issue on issue.id = post.issue_id LEFT JOIN users on users.id = post.author_id GROUP BY post.id;';		
 		$query = $this->db->prepare($sql);
 		$query->execute();
@@ -56,7 +56,7 @@ class Post {
 				echo '<td><a href="">Zobrazit recenzenty</td>';
 				echo '<td><a href="">Zobrazit posudky</a></td>';
 				//echo '<td><button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>';
-				echo '<td><a href="#"><button class="btn-xs btn-success">Zobrazit</button></a></td>';
+				echo '<td><a href="./post-manage.php?id=' . $returned_row["post_id"] . '"><button class="btn-xs btn-success">Spravovat</button></a></td>';
 				echo "</tr>"; //todo
 			}
 		} else echo "nenalezen žádný článek";
@@ -107,6 +107,81 @@ class Post {
 		$query = $this->db->prepare($sql);
 		$query->execute();
 	}	
+
+	function getPostInfo($information) {
+		$ID = ($_GET['id']);
+		$sql = "SELECT post.name as name, post.author_id as author_id, post.status as status, post.issue_id as issue_id, users.name as user_name, users.surname as user_surname, issue.name as issue_name FROM post LEFT JOIN users on post.author_id = users.id LEFT JOIN issue on issue.id = post.issue_id WHERE post.id = '$ID'";
+		$query = $this->db->prepare($sql);
+		$query->execute();
+		$returned_row = $query->fetch(PDO::FETCH_ASSOC);
+		switch ($information) {
+			case 'name':
+				return $returned_row["name"];
+				break;
+			case 'author_id':
+				return $returned_row["user_name"]." ". $returned_row["user_surname"];
+				break;
+			case 'status':
+				return $returned_row["status"];
+				break;
+			case 'issue_id':
+				return $returned_row["issue_id"];
+				break;				
+
+			
+			default:
+				return false;
+				break;
+
+		}
+	}
+
+
+	public function getReviewers(){
+		$sql = "SELECT name as user_name, surname as user_surname FROM users WHERE role='recenzent' ";
+		
+		$query = $this->db->prepare($sql);
+		$query->execute();
+
+
+
+		echo '<select class="form-control">';
+		echo '<option value="0">Vyberte recenzenta</option>';
+
+				foreach ($query as $returned_row)
+				{
+
+				echo '<option value = "'.$returned_row['user_name'].'" >';
+				echo $returned_row['user_name']. " " .$returned_row['user_surname'];
+				echo '</option>';
+				}               
+			
+		echo '</select>';
+
+	}	
+
+	public function getIssuesForPost(){
+		$sql = "SELECT issue.name as issue_name FROM issue";
+		
+		$query = $this->db->prepare($sql);
+		$query->execute();
+
+		$test = "test";
+
+		echo '<select class="form-control">';
+		echo '<option value="0">Vyberte vydání</option>';
+
+				foreach ($query as $returned_row)
+				{
+
+				echo '<option value = "'.$returned_row['issue_name'].'" >';
+				echo $returned_row['issue_name'];
+				echo '</option>';
+				}               
+			
+		echo '</select>';
+
+	}
 
 }
 
