@@ -61,7 +61,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
             <th>Vydání</th>
             <th>Status</th>
             <th>Počet verzí</th>
-            <th>Recenzenti</th>
+            <th>Recenzent</th>
             <th>Posudky</th>
             <th>Akce</th>
           </tr>
@@ -69,6 +69,10 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
             if ($user->getUserInfo("role") == "autor") {
               $userID = $user->getUserInfo("id");
               $post->getAllPostUser($userID); // ZOBRAZIT JEN POSTY PRO DANEHO AUTORA NEBO VSECHNY POKUD JE TO REDAKTOR/SEFREDAKTOR
+            }
+            if ($user->getUserInfo("role") == "recenzent") {
+              $userID = $user->getUserInfo("id");
+              $post->getAllPostReviewer($userID); // ZOBRAZIT JEN POSTY PRO DANEHO AUTORA NEBO VSECHNY POKUD JE TO REDAKTOR/SEFREDAKTOR
             }
             else
               $post->getAllPost();

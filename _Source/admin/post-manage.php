@@ -60,20 +60,24 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
       <div class="col-md-6">
         <div class="card card-outline card-info">
 
+        <?php
+        $ID = ($_GET['id']);
 
-        <form role="form" action="" method="post" enctype="multipart/form-data">  <!--DODELAT UPLOAD UPRAVENYCH UDAJU-->
+        ?>
+        
+        <form role="form" action="updatePost.php?id=<?php echo $ID ?>" method="post" enctype="multipart/form-data">  <!--DODELAT UPLOAD UPRAVENYCH UDAJU-->
           <div class="card-body">
             <div class="form-group">
-              <label for="exampleInputEmail1">Název vydání</label>
-              <input type="text" class="form-control" name="name" id="name_issue" placeholder="Název vydání" value="<?php echo $post->getPostInfo("name");?>" required>
+              <label for="exampleInputEmail1">Název článku</label>
+              <input type="text" class="form-control" name="name_post" id="name_post" placeholder="Název článku" value="<?php echo $post->getPostInfo("name");?>" required>
             </div>  
             <div class="form-group">
               <label for="exampleInputEmail1">Autor</label>
-              <input type="text" class="form-control" name="name" id="name_issue" placeholder="<?php echo $post->getPostInfo("author_id");?>" disabled>
+              <input type="text" class="form-control" name="name" id="autor" placeholder="<?php echo $post->getPostInfo("author_id");?>" disabled>
             </div>   
             <div class="form-group">
               <label for="exampleInputEmail1">Status</label>
-              <input type="text" class="form-control" name="name" id="name_issue" placeholder="Status" value="<?php echo $post->getPostInfo("status");?>" required>
+              <input type="text" class="form-control" name="status" id="status" placeholder="Status" value="<?php echo $post->getPostInfo("status");?>" required>
             </div> 
             <div class="form-group">
               <label for="exampleInputEmail1">Vydání</label>
