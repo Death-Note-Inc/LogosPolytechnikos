@@ -74,8 +74,12 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
               $userID = $user->getUserInfo("id");
               $post->getAllPostReviewer($userID); 
             }
-            else
+            if ($user->getUserInfo("role") == "redaktor") {
               $post->getAllPost();
+            }
+            if ($user->getUserInfo("role") == "administrator") {
+              $post->getAllPost();
+            }
 
             if ( isset($_GET['success']) && $_GET['success'] == 1 )
             {

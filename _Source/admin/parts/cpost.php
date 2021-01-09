@@ -110,8 +110,8 @@ class Post {
 	}
 
 	public function getAllPostUser($userID){
-		$sql = 'SELECT users.name as user_name, users.id, post.name as post_name, count(post.id) as versions, users.surname as user_surname, issue.name as issue_name, post.status FROM post 
-		LEFT JOIN users on post.author_id = users.id LEFT JOIN issue on issue.id = post.issue_id WHERE users.id = '.$userID.'  GROUP BY post.id;';		
+		$sql = "SELECT users.name as user_name, users.id, post.name as post_name, post.id as post_id, count(post.id) as versions, users.surname as user_surname, issue.name as issue_name, post.status, post.reviewer_id as reviewer_id FROM post 
+		LEFT JOIN users on post.author_id = users.id LEFT JOIN issue on issue.id = post.issue_id WHERE users.id = '$userID'  GROUP BY post.id;";		
 		$query = $this->db->prepare($sql);
 		$query->execute();
 		if ($query->rowCount() > 0) {
@@ -121,10 +121,10 @@ class Post {
 				echo '<td>' .$returned_row["issue_name"] .'</td>';
 				echo '<td>' .$returned_row["status"] .'</td>';
 				echo '<td>' .$returned_row["versions"] .'</td>';
-				$user_id = $returned_row["reviewer_id"];
-				echo $this->getReviewer($user_id);
+				$rev_id = $returned_row["reviewer_id"];
+				echo $this->getReviewer($rev_id);
 				echo '<td><a href="">Zobrazit posudky</a></td>';
-				echo '<td><button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>';
+				echo '<td><a href="./post-manage.php?id=' . $returned_row["post_id"] . '"><button class="btn-xs btn-success">Spravovat</button></a></td>';
 				echo "</tr>"; //todo
 			}
 		} else echo "nenalezen žádný článek";
@@ -178,11 +178,22 @@ class Post {
 
 
 
-	public function create($id, $stav, $nazev){
-		$sql = "INSERT INTO post(author_id, status, name) VALUES('$id','$stav','$nazev');";
+	public function create($id, $stav, $nazev, $file_name){
+		$sql = "INSERT INTO post(author_id, status, name, file_name) VALUES('$id','$stav','$nazev','$file_name');";
 		$query = $this->db->prepare($sql);
 		$query->execute();
 	}	
+
+	public function getFileName($ID){
+		$sql = "SELECT post.file_name as file_name FROM post WHERE post.id='$ID'";
+		$query = $this->db->prepare($sql);
+		$query->execute();
+
+		foreach ($query as $returned_row)
+		{
+			echo $returned_row['file_name'];
+		}  
+	}		
 
 	function getPostInfo($information) {
 		$ID = ($_GET['id']);

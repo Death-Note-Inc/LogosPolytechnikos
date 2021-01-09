@@ -9,6 +9,7 @@ $id = "1";
 
 $target_dir = "../uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$file_name = basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
@@ -36,7 +37,7 @@ if ($uploadOk == 0) {
 	//mkdir("../uploads/1",0777,true);
 
 	$name = $_POST["articleName"];
-	$post->create($user->getUserInfo("id"),'Nový', $name);
+	$post->create($user->getUserInfo("id"),'Nový', $name, $file_name);
 	$post_id = $post->GetLastestPost();
 	$dir = "../uploads/" .$post_id;
 	mkdir($dir,0777,true);
