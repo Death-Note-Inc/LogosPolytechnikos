@@ -66,7 +66,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
             <th>Název</th>
             <th>Status</th>
             <th>Počet verzí</th>
-            <th>Recenzenti</th>
+            <th>Recenzent</th>
             <th>Posudky</th>
             <th>Akce</th>
           </tr>
