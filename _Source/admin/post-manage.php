@@ -94,6 +94,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
           <!-- /.card-body -->
           <div class="card-footer">
             <button type="submit" class="btn btn-primary">Upravit článek</button>
+            <a href="posts.php" class="btn btn-success" role="button">Vrátit se zpět</a>
           </div>
         </form>
         </div>

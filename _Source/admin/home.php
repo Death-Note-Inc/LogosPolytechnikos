@@ -62,7 +62,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
           <!-- small box -->
           <div class="small-box bg-info">
             <div class="inner">
-              <h3><?php echo $post->getWaitingCount() ?></h3>
+              <h3><?php echo $post->getTotalNewCount() ?></h3>
 
               <p>Nových článků ke schválení</p>
             </div>

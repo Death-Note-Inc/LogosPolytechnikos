@@ -27,7 +27,14 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
 
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
-    <?php include_once("parts/nav-".$user->getUserInfo("role").".php");?>
+    <?php include_once("parts/nav-".$user->getUserInfo("role").".php");
+    if ( isset($_GET['success']) && $_GET['success'] == 1 )
+    {
+        // treat the succes case ex:
+        $message = "Nové vydání bylo přidáno úspěšně.";
+        echo "<script type='text/javascript'>alert('$message');</script>";
+    }
+    ?>
 </div>
 
 

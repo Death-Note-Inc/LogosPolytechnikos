@@ -61,20 +61,19 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
         <div class="card card-outline card-info">
 
 
-          <!-- NENI TU ACTION PROTOZE JSEM DEMENT A NEJDE MI TO ABY TO TEN VYPRCANEJ CISSUE SEZRAL A HODIL DO DATABAZE)))))))))))))))) -->
-        <form role="form" action="" method="post" enctype="multipart/form-data">
+        <form role="form" action="addIssue.php" method="post" enctype="multipart/form-data">
           <div class="card-body">
             <div class="form-group">
               <label for="exampleInputEmail1">Vložte název vydání</label>
-              <input type="text" class="form-control" name="name" id="name_issue" placeholder="Název vydání" required>
+              <input type="text" class="form-control" name="name_issue" id="name_issue" placeholder="Název vydání" required>
             </div>  
             <div class="form-group">
               <label for="exampleInputEmail1">Vložte datum</label>
-              <input type="date" class="form-control" name="date" id="date_issue" placeholder="" required>
+              <input type="date" class="form-control" name="date_issue" id="date_issue" placeholder="" required>
             </div> 
               <div class="form-group">
               <label for="exampleInputEmail1">Vložte status</label>
-              <input type="text" class="form-control" name="status" id="status_issue" placeholder="Status vydání" required>
+              <input type="text" class="form-control" name="status_issue" id="status_issue" placeholder="Status vydání" required>
             </div>  
           </div>
 

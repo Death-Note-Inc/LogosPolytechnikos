@@ -27,8 +27,14 @@ if((isset($_POST['reviewers'])) and (isset($_POST['issues']))) {
     $status = $_POST['status'];
     
     $post->updatePost($test, $issue_id, $name, $status);
-
+    
     echo "Článek byl úspěšně upraven.";
+    $message = "Článek byl úspěšně upraven.";
+    echo "<script type='text/javascript'>alert('$message');</script>";
+    
+    header("Location: posts.php?success=1");
+    //sleep(10);
+    //die();
 
 } 
 else {

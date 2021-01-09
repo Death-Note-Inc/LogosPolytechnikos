@@ -76,8 +76,16 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
             }
             else
               $post->getAllPost();
+
+            if ( isset($_GET['success']) && $_GET['success'] == 1 )
+            {
+                // treat the succes case ex:
+                $message = "Článek byl úspěšně upraven.";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
           ?> 
         </table>
+
 
         
       </div>

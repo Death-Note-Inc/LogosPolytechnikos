@@ -21,6 +21,15 @@ class Post {
 
 	}
 
+	public function getTotalNewCount() {
+		$sql = "SELECT * FROM post WHERE status='Nový'";
+			$query = $this->db->prepare($sql);
+			$query->execute();
+
+			return $query->rowCount();
+
+	}	
+
 
 	public function getWaitingCount() {
 		$sql = "SELECT * FROM post where status = '0'";
