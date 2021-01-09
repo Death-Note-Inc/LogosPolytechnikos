@@ -44,9 +44,9 @@
                   <p>Přidat článek</p>
                 </a>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">
+                  <a href="post-check.php" class="nav-link">
                     <i class="far fa-check-square nav-icon"></i>
-                    <span class="badge badge-warning right"><?php echo($post->getWaitingCount())?></span>
+                    <span class="badge badge-warning right"><?php echo($post->getTotalNewCount())?></span>
                     <p>Ke schválení</p>
                   </a>
                 </li>

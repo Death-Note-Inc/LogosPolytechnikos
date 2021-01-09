@@ -39,12 +39,12 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Spravovat články</h1>
+          <h1>Články ke schválení</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="home.php">Domů</a></li>
-            <li class="breadcrumb-item active">Spravovat články</li>
+            <li class="breadcrumb-item active">Články ke schválení</li>
           </ol>
         </div>
       </div>
@@ -66,16 +66,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
             <th>Akce</th>
           </tr>
           <?php           
-            if ($user->getUserInfo("role") == "autor") {
-              $userID = $user->getUserInfo("id");
-              $post->getAllPostUser($userID); 
-            }
-            if ($user->getUserInfo("role") == "recenzent") {
-              $userID = $user->getUserInfo("id");
-              $post->getAllPostReviewer($userID); 
-            }
-            else
-              $post->getAllPost();
+            $post->getCheckPost();
 
             if ( isset($_GET['success']) && $_GET['success'] == 1 )
             {

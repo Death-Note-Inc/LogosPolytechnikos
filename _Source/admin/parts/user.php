@@ -44,6 +44,41 @@ class User {
 		}
 	}
 
+	function getUserInfoEdit($id, $information) {
+		if ($this->is_logged_in()) {
+			$session = ($_SESSION["user_session"]);
+			$sql = "SELECT * FROM users WHERE id = '$id'";
+			$query = $this->db->prepare($sql);
+			$query->execute();
+			$returned_row = $query->fetch(PDO::FETCH_ASSOC);
+			switch ($information) {
+				case 'id':
+					return $returned_row["id"];
+					break;		
+				case 'name':
+					echo $returned_row["name"];
+					break;
+				case 'surname':
+					echo $returned_row["surname"];
+					break;
+				case 'email':
+					echo $returned_row["email"];
+					break;
+				case 'role':
+					echo $returned_row["role"];
+					break;
+				case 'id':
+					echo $returned_row["id"];
+					break;
+				
+				default:
+					return false;
+					break;
+			}
+
+		}
+	}
+
 
 	public function __construct($db_conn) {
 		$this->db = $db_conn;
@@ -69,6 +104,25 @@ class User {
 			echo $e;
 		}
 	}
+
+	public function updateUser($id, $name, $surname, $email, $role, $password) {
+		//check if user allready existu
+	   try {
+		   $hash_password = password_hash($password, PASSWORD_DEFAULT);
+		   $sql = "UPDATE users SET name='$name', surname='$surname', email='$email', password='$hash_password', role='$role' WHERE users.id='$id'";
+
+
+		   $query = $this->db->prepare($sql);
+
+
+
+		   // Execute the query
+		   $query->execute();
+
+	   } catch(PDOException $e) {
+		   echo $e;
+	   }
+   }
 
 	//login user
 	public function login($email, $password) {
@@ -125,7 +179,7 @@ class User {
 	}
 
 	public function getAllUsers(){
-		$sql = 'SELECT users.id as user_id, users.name as user_firstname, users.surname as user_lastname, users.email as user_email, users.role as user_role FROM users';		
+		$sql = 'SELECT users.id as user_id, users.name as user_firstname, users.surname as user_lastname, users.email as user_email, users.role as user_role FROM users ORDER BY users.id DESC';		
 		$query = $this->db->prepare($sql);
 		$query->execute();
 		if ($query->rowCount() > 0) {
@@ -135,9 +189,16 @@ class User {
 				echo '<td>' .$returned_row["user_lastname"] .'</td>';
 				echo '<td>' .$returned_row["user_email"] .'</td>';
 				echo '<td>' .$returned_row["user_role"] .'</td>';
-				echo '<td><button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>';
+				echo '<td><a href="./users-edit.php?id=' . $returned_row["user_id"] . '"><button class="btn-xs btn-success">Editovat</button></a>
+				<a href="./usersDelete.php?id=' . $returned_row["user_id"] . '" onclick="return confirm(\'Opravdu chcete vymazat tohoto uživatele?\');"><button class="btn-xs btn-danger">Smazat uživatele</button></a></td>';
 				echo "</tr>";
 			}
-		} else echo "nenalezen žádný článek";
+		} else echo "Nenalezen žádný uživatel";
+	}
+
+	public function deleteUser($id){
+		$sql = "DELETE FROM users WHERE users.id=$id ";		
+		$query = $this->db->prepare($sql);
+		$query->execute();
 	}
 }
