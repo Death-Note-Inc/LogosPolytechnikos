@@ -95,7 +95,7 @@ class Post {
 				echo $this->getReviewer($user_id);
 				echo '<td><a href="">Zobrazit posudky</a></td>';
 				echo '<td><a href="./post-manage.php?id=' . $returned_row["post_id"] . '"><button class="btn-xs btn-success">Spravovat</button></a></td>';
-				echo "</tr>"; //todo
+				echo "</tr>"; 
 			}
 		} else echo "nenalezen žádný článek";
 	}
@@ -185,7 +185,7 @@ class Post {
 
 
 		echo '<select name="reviewers" class="form-control">';
-		echo '<option value="0">Vyberte recenzenta</option>';
+		//echo '<option value="0">Vyberte recenzenta</option>';
 
 				foreach ($query as $returned_row)
 				{
