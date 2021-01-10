@@ -67,7 +67,7 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
               <label for="exampleInputFile">Níže nahrajte svůj článek ve formátu pdf nebo doc(x)</label>
               <div class="input-group">
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input" accept=".doc, .docx, .pdf" id="fileToUpload" name="fileToUpload">
+                    <input type="file" class="custom-file-input" accept=".doc, .docx, .pdf" id="fileToUpload" name="fileToUpload" required>
                     <label class="custom-file-label" for="myInput">Vyberte soubor</label>
                 </div>
               </div>

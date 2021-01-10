@@ -80,6 +80,9 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
             if ($user->getUserInfo("role") == "administrator") {
               $post->getAllPost();
             }
+            if ($user->getUserInfo("role") == "sefredaktor") {
+              $post->getAllPostView();
+            }
 
             if ( isset($_GET['success']) && $_GET['success'] == 1 )
             {

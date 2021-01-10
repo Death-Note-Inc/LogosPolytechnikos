@@ -70,7 +70,23 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
             <th>Posudky</th>
             <th>Akce</th>
           </tr>
-          <?php $post->getIssuePosts("all"); ?>
+          <?php 
+            if ($user->getUserInfo("role") == "autor") {
+              $post->getIssuePostsView("all");
+            }
+            if ($user->getUserInfo("role") == "recenzent") {
+              $post->getIssuePostsView("all"); 
+            }
+            if ($user->getUserInfo("role") == "redaktor") {
+              $post->getIssuePosts("all");
+            }
+            if ($user->getUserInfo("role") == "administrator") {
+              $post->getIssuePosts("all");
+            }
+            if ($user->getUserInfo("role") == "sefredaktor") {
+              $post->getIssuePostsView("all");
+            }
+            ?>
         </table>
 
         

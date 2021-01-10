@@ -109,6 +109,28 @@ class Post {
 		} else echo "nenalezen žádný článek";
 	}
 
+	public function getAllPostView(){
+		$sql = 'SELECT users.name as user_name, users.id as user_id, post.name as post_name, count(post.id) as versions, users.surname as user_surname, issue.name as issue_name, post.status, post.id as post_id, 
+		post.reviewer_id as reviewer_id FROM post 
+		LEFT JOIN issue on issue.id = post.issue_id LEFT JOIN users on users.id = post.author_id GROUP BY post.id;';		
+		$query = $this->db->prepare($sql);
+		$query->execute();
+		if ($query->rowCount() > 0) {
+			foreach ($query as $returned_row) {
+				echo '<td>' .$returned_row["user_name"] ." " .$returned_row["user_surname"] .'</td>';
+				echo '<td>' .$returned_row["post_name"] .'</td>';
+				echo '<td>' .$returned_row["issue_name"] .'</td>';
+				echo '<td>' .$returned_row["status"] .'</td>';
+				echo '<td>' .$returned_row["versions"] .'</td>';
+				$user_id = $returned_row["reviewer_id"];
+				echo $this->getReviewer($user_id);
+				echo '<td><a href="">Zobrazit posudky</a></td>';
+				echo '<td>-</td>';
+				echo "</tr>"; //todo
+			}
+		} else echo "nenalezen žádný článek";
+	}
+
 	public function getAllPostUser($userID){
 		$sql = "SELECT users.name as user_name, users.id, post.name as post_name, post.id as post_id, count(post.id) as versions, users.surname as user_surname, issue.name as issue_name, post.status, post.reviewer_id as reviewer_id FROM post 
 		LEFT JOIN users on post.author_id = users.id LEFT JOIN issue on issue.id = post.issue_id WHERE users.id = '$userID'  GROUP BY post.id;";		
@@ -175,6 +197,30 @@ class Post {
 			}
 		} else echo "nenalezen žádný článek";
 	}
+
+	public function getIssuePostsView(){
+		$ID = ($_GET['id']);
+		$sql = 'SELECT users.name as user_name, users.id as user_id, post.name as post_name, count(post.id) as versions, users.surname as user_surname, issue.name as issue_name, post.status, post.id as post_id, 
+		post.reviewer_id as reviewer_id FROM post 
+		LEFT JOIN issue on issue.id = post.issue_id LEFT JOIN users on users.id = post.author_id WHERE post.issue_id = '.$ID.' GROUP BY post.id;';		
+		$query = $this->db->prepare($sql);
+		$query->execute();
+		if ($query->rowCount() > 0) {
+			foreach ($query as $returned_row) {
+				echo '<td>' .$returned_row["user_name"] ." " .$returned_row["user_surname"] .'</td>';
+				echo '<td>' .$returned_row["post_name"] .'</td>';
+				echo '<td>' .$returned_row["status"] .'</td>';
+				echo '<td>' .$returned_row["versions"] .'</td>';
+				$user_id = $returned_row["reviewer_id"];
+				echo $this->getReviewer($user_id);
+				echo '<td><a href="">Zobrazit posudky</a></td>';
+				//echo '<td><button class="btn-xs btn-primary">Upravit</button> <button class="btn-xs btn-danger">Odstranit</button></td>';
+				echo '<td>-</td>';
+				echo "</tr>"; //todo
+			}
+		} else echo "nenalezen žádný článek";
+	}
+
 
 
 
