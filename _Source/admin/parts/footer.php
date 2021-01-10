@@ -31,7 +31,7 @@
 <script src="plugins/sparklines/sparkline.js"></script>
 <!-- JQVMap -->
 <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.world.js"></script>
 <!-- jQuery Knob Chart -->
 <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
@@ -64,3 +64,4 @@ $('ul.treeview-menu a').filter(function() {
    return this.href == url;
 }).parentsUntil(".sidebar-menu > .treeview-menu").addClass('active');
     </script>
+
