@@ -61,14 +61,14 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
           <div class="card-body">
             <div class="form-group">
               <label for="exampleInputEmail1">Vložte název článku (povinné)</label>
-              <input type="text" class="form-control" name="articleName" id="articleName" placeholder="Článek 1" required>
+              <input type="text" class="form-control" name="articleName" id="articleName" placeholder="Název článku" required>
             </div>          
             <div class="form-group">
               <label for="exampleInputFile">Níže nahrajte svůj článek ve formátu pdf nebo doc(x)</label>
               <div class="input-group">
                 <div class="custom-file">
-                  <input type="file" required class="custom-file-input" accept= "application/msword,application/pdf" id="fileToUpload" name="fileToUpload">
-                  <label class="custom-file-label" for="exampleInputFile">Vybrat soubor</label>
+                    <input type="file" class="custom-file-input" accept=".doc, .docx, .pdf" id="fileToUpload" name="fileToUpload">
+                    <label class="custom-file-label" for="myInput">Vyberte soubor</label>
                 </div>
               </div>
             </div>
@@ -89,6 +89,14 @@ if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
 
 
  <?php include_once("parts/footer.php");?>
+
+ <script>
+document.querySelector('.custom-file-input').addEventListener('change',function(e){
+  var fileName = document.getElementById("fileToUpload").files[0].name;
+  var nextSibling = e.target.nextElementSibling
+  nextSibling.innerText = fileName
+})
+</script>
 
 </body>
 </html>

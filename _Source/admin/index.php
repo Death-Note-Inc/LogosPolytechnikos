@@ -17,7 +17,6 @@ include_once("parts/db-connect.php");
 
 //check if login form submitted
 if (isset($_POST['log_in'])) {
-  echo "login";
  $user_email = trim($_POST['user_name_email']);
  $user_password = trim($_POST['user_password']);
  if ($user->login($user_email, $user_password)) {
@@ -41,7 +40,7 @@ if (isset($_POST['log_in'])) {
         <p class="login-box-msg">Přihlaste se prosím</p>
         <?php 
         if (isset($chyba)) {
-          echo "Přihlašování se nezdařilo";
+          echo "Zadali jste špatné uživatelské jméno nebo heslo";
         }
         ?>
 
