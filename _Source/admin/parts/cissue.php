@@ -53,7 +53,7 @@ class Issue {
 	}
 
 	public function getOldIssue(){
-		$sql = 'SELECT issue.name as issue_name, DATE_FORMAT(issue.date, "%m/%Y") as issue_date, issue.id as issue_id FROM issue WHERE YEAR(issue.date) != YEAR(CURDATE()) ORDER BY issue.id DESC;';
+		$sql = 'SELECT issue.name as issue_name, DATE_FORMAT(issue.date, "%m/%Y") as issue_date, issue.id as issue_id FROM issue WHERE YEAR(issue.date) < 2020  ORDER BY issue.id DESC;';
 		$query = $this->db->prepare($sql);
 		$query->execute();
 		if ($query->rowCount() > 0) {
