@@ -1,0 +1,1 @@
+Bylo realizováno pomocí emailu.

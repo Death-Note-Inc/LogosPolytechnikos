@@ -1,0 +1,1 @@
+Prezentace oponovaného týmu neobsahovala žádnou powerpointovou prezentaci. Pouze dokument. Každý člen našeho týmu přečetl požadavky pouze ústně.
